@@ -15,8 +15,8 @@
 					<div class="grd-row">
 						<div class="grd-row-col-1-5"></div>
 						<div class="grd-row-col-3-5 bg--off-white brdr--light-gray">
-							<div class="p2 py3 pb1 txt--left">
-								<img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/logo-viaa.png') ?>" alt="Logo VIAA" style="width:120px">
+							<div class="p2 py3 pb1 txt--center">
+								<img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
 							</div>
 <?php
 if ($this->data['errorcode'] !== NULL) {
