@@ -39,11 +39,10 @@ if (!is_null($sid['url'])) {
                 <img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
               </div>
               <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
-                <h1>Geen toegang</h1>
                 <p>Je hebt geen toegang tot deze toepassing met jouw account.</p>
               </div>
               <div class="my2 small txt--center">
-                <p><a href="/module.php/core/authenticate.php?as=viaa-ldap&logout">Andere account proberen?</a></p>
+                <p><a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">Contacteer support@viaa.be</a></p>
               </div>
               <div class="txt--center mb1">
                 <p><code class="small fnt--mid-gray">© 2017 / <a href="http://www.viaa.be">www.viaa.be</a></code>
