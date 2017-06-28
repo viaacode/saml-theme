@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/app.css') ?>">
 	</head>
 	<body>
+	<?php $this->includeAtTemplateBase('includes/GA-tracker.php'); ?>
 		<div class="container">
 			<div class="measure p2">
 				<div class="grd">
