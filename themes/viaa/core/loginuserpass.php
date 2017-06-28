@@ -9,7 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/app.css') ?>">
 	</head>
 	<body>
-	<?php $this->includeAtTemplateBase('includes/GA-tracker.php'); ?>
 		<div class="container">
 			<div class="measure p2">
 				<div class="grd">
@@ -71,6 +70,6 @@ if ($this->data['errorcode'] !== NULL) {
 		  });
 		</script>
 		<!-- End of viaa Zendesk Widget script -->
-	</body>
-</html>
+	<?php $this->includeAtTemplateBase('includes/GA-tracker.php'); ?>
+
 
