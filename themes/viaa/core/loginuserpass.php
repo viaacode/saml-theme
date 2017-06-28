@@ -70,6 +70,6 @@ if ($this->data['errorcode'] !== NULL) {
 		  });
 		</script>
 		<!-- End of viaa Zendesk Widget script -->
-	<?php $this->includeAtTemplateBase('includes/GA-tracker.php'); ?>
+	<?php $this->includeAtTemplateBase('includes/footer-embed.php'); ?>
 
 
