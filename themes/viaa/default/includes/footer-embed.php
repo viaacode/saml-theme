@@ -6,8 +6,10 @@
 
       ga('create', 'UA-41819353-7', 'auto');
       ga('send', 'pageview');
+      ga('create', 'UA-42174731-1', 'auto', 'viaa');
+      ga('viaa.send', 'pageview');
 
     </script>
-    
+
   </body>
 </html>
