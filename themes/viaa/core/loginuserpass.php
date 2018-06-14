@@ -37,7 +37,7 @@ if ($this->data['errorcode'] !== NULL) {
 							<div class="p1 px2">
 								<form name="loginform" id="loginform" action="?" method="post">
 									<div class="form-group">
-										<label for="inputUsername">Gebruikersnaam</label><input type="text" name="username" class="form-control" id="inputUsername" placeholder="Gebruikersnaam">
+										<label for="inputUsername">Gebruikersnaam</label><input type="text" name="username" class="form-control" id="inputUsername" placeholder="Gebruikersnaam" autofocus>
 									</div>
 									<div class="form-group">
 										<label for="inputPassword">Wachtwoord</label><input type="password" name="password" class="form-control" id="inputPassword" placeholder="Wachtwoord">
