@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/furtive.min.css') ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/app.css') ?>">
+		<link rel="icon" type="image/png" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/favicon-32x32.png') ?>" sizes="32x32" />
+		<link rel="icon" type="image/png" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/favicon-16x16.png') ?>" sizes="16x16" />
 	</head>
 	<body>
 		<div class="container">
