@@ -41,15 +41,15 @@
         <div class="u-spacer-bottom-l">
           <div class="o-form-group-layout o-form-group-layout--standard">
             <div class="o-form-group">
-              <label class="o-form-group__label" for="inputUsername">E-mailadres</label>
+              <label class="o-form-group__label" for="emailId">E-mailadres</label>
               <div class="o-form-group__controls">
-                <input class="c-input" id="inputUsername" type="text" name="email">
+                <input name="username" class="c-input" id="emailId" type="text">
               </div>
             </div>
             <div class="o-form-group">
-              <label class="o-form-group__label" for="inputPassword">Wachtwoord</label>
+              <label class="o-form-group__label" for="passwordId">Wachtwoord</label>
               <div class="o-form-group__controls">
-                <input class="c-input" id="inputPassword" type="password">
+                <input name="password" class="c-input" id="passwordId" type="password">
               </div>
             </div>
             <?php
@@ -65,6 +65,7 @@
               </button>
             </div>
           </div>
+          <!--
           <hr class="c-hr">
           <div class="c-content">
             <p>Log in met:</p>
@@ -95,6 +96,7 @@
               </div>
             </a>
           </div>
+          -->
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
