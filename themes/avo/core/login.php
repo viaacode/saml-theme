@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="http://develop.viaa2.mono.digital/css/main.css">
+  <link rel="stylesheet" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/avo-main.css') ?>">
   <meta name="robots" content="noindex">
 </head>
 
@@ -20,24 +20,45 @@
         </h1>
       </div>
       <hr class="c-hr">
+      <?php if ($this->data['errorcode'] !== NULL) { ?>
+      <div class="c-alert">
+        <div class="c-alert__body">
+          <div class="u-spacer-right-s">
+            <div class="o-svg-icon o-svg-icon-button-multicolor-circle-warning  ">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" fill="black" fill-opacity="0"></rect>
+                <path d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12Z" fill="#FF1744"></path>
+                <path d="M13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="white"></path>
+              </svg>
+            </div>
+          </div>
+          <p><?php echo $this->t('{errors:title_' . $this->data['errorcode'] . '}'); ?></p>
+        </div>
+      </div>
+      <?php } ?>
       <h3 class="c-h2">Inloggen</h3>
-      <form action="/app/home.html">
+      <form name="loginform" id="loginform" action="?" method="post">
         <div class="u-spacer-bottom-l">
           <div class="o-form-group-layout o-form-group-layout--standard">
             <div class="o-form-group">
-              <label class="o-form-group__label" for="emailId">E-mailadres</label>
+              <label class="o-form-group__label" for="inputUsername">E-mailadres</label>
               <div class="o-form-group__controls">
-                <input class="c-input" id="emailId" type="text" name="email" value="tamara.deschutter@hotmail.com">
+                <input class="c-input" id="inputUsername" type="text" name="email">
               </div>
             </div>
             <div class="o-form-group">
-              <label class="o-form-group__label" for="passwordId">Wachtwoord</label>
+              <label class="o-form-group__label" for="inputPassword">Wachtwoord</label>
               <div class="o-form-group__controls">
-                <input class="c-input" id="passwordId" type="password">
+                <input class="c-input" id="inputPassword" type="password">
               </div>
             </div>
+            <?php
+              foreach ($this->data['stateparams'] as $name => $value) {
+	              echo('<input type="hidden" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" />');
+              }
+						?>
             <div class="o-form-group">
-              <button class="c-button c-button--primary">
+              <button type="submit" name="wp-submit" id="wp-submit" class="c-button c-button--primary">
                 <div class="c-button__content">
                   <div class="c-button__label">Inloggen</div>
                 </div>
