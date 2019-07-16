@@ -16,7 +16,7 @@
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
         <h1 class="c-brand c-brand--large">
-          <img src="/images/avo-logo.svg" alt="Archief voor Onderwijs">
+          <img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/avo-logo.svg')?>" alt="Archief voor Onderwijs">
         </h1>
       </div>
       <hr class="c-hr">
