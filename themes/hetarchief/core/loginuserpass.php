@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/avo-main.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
   <meta name="robots" content="noindex">
 </head>
 
