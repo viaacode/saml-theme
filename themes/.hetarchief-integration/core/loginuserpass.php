@@ -100,7 +100,7 @@
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="http://account-tst.hetarchief.be/users/password/new?redirect_to='https://tst.hetarchief.be'">Wachtwoord vergeten?</a>
+              <a href="http://account-tst.hetarchief.be/users/password/new?redirect_to=https://tst.hetarchief.be">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
