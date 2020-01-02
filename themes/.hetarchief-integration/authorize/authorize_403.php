@@ -31,25 +31,31 @@ if (!is_null($sid['url'])) {
   <body>
     <div class="container">
       <div class="measure p2">
-        <div class="grd">
-          <div class="grd-row">
-            <div class="grd-row-col-1-5"></div>
-            <div class="grd-row-col-3-5 bg--off-white brdr--light-gray">
-              <div class="p2 py3 pb1 mb1 txt--center">
-                <img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
-              </div>
-              <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
-                <p>Je hebt met jouw VIAA-account geen toegang tot deze toepassing.</p>
-              </div>
-              <div class="my2 small txt--center">
-                <p>Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@viaa.be</a></p>
-              </div>
-              <div class="txt--center mb1">
-                <p><code class="small fnt--mid-gray">Â© 2017 / <a href="http://www.viaa.be">www.viaa.be</a></code>
-              </div>
-            </div>
-            <div class="grd-row-col-1-5"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="grd">
+	  <div class="grd-row">
+	    <div class="grd-row-col-1-5"></div>
+	    <div class="grd-row-col-3-5 bg--off-white brdr--light-gray">
+	      <div class="p2 py3 pb1 mb1 txt--center">
+		<img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
+	      </div>
+	      <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
+                <?php
+                 if (isset($this->data['reject_msg'])) {
+                   echo $this->data['reject_msg']['nl'];
+                 } else {
+                   echo 'Toegang geweigerd';
+                 }?>
+	      </div>
+	      <div class="my2 small txt--center">
+		<p><a href="<?php echo $this->data['logoutURL']?>">Logout </a></p>
+	      </div>
+	      <div class="my2 small txt--center">
+		<p>Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@viaa.be</a></p>
+	      </div>
+	      <div class="txt--center mb1">
+		<p><code class="small fnt--mid-gray">© 2017 / <a href="http://www.viaa.be">www.viaa.be</a></code>
+	      </div>
+	    </div>
+	    <div class="grd-row-col-1-5"></div>
+	  </div>
+	</div>

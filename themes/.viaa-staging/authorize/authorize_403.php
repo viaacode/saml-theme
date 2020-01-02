@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // original file:  /var/www/simplesaml/modules/authorize/www/authorize_403.php
 
@@ -38,8 +38,16 @@ if (!is_null($sid['url'])) {
               <div class="p2 py3 pb1 mb1 txt--center">
                 <img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
               </div>
-              <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
-                <p>Je hebt met jouw VIAA-account geen toegang tot deze toepassing.</p>
+	      <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
+                 <?php
+                 if (isset($this->data['reject_msg'])) {
+                   echo $this->data['reject_msg']['nl'];
+                 } else {
+                   echo 'Toegang geweigerd';
+		 }?>
+	      </div>
+	      <div class="my2 small txt--center">
+	        <p><a href="<?php echo $this->data['logoutURL']?>">Logout </a></p>
               </div>
               <div class="my2 small txt--center">
                 <p>Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@viaa.be</a></p>
@@ -53,7 +61,7 @@ if (!is_null($sid['url'])) {
         </div>
       </div>
     </div>
-    
+
     <!-- Start of viaa Zendesk Widget script -->
     <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","viaa.zendesk.com");/*]]>*/</script>
     <script>
