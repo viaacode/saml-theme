@@ -36,7 +36,7 @@ if (!is_null($sid['url'])) {
 	    <div class="grd-row-col-1-5"></div>
 	    <div class="grd-row-col-3-5 bg--off-white brdr--light-gray">
 	      <div class="p2 py3 pb1 mb1 txt--center">
-		<img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
+		<img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/logo-algemeen.svg') ?>" alt="Logo VIAA" style="width:120px">
 	      </div>
 	      <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
                 <?php
