@@ -46,9 +46,6 @@ if (!is_null($sid['url'])) {
                    echo 'Toegang geweigerd';
 		 }?>
 	      </div>
-	      <div class="my2 small txt--center">
-	        <p><a href="<?php echo $this->data['logoutURL']?>">Logout </a></p>
-              </div>
               <div class="my2 small txt--center">
                 <p>Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@viaa.be</a></p>
               </div>
@@ -70,5 +67,10 @@ if (!is_null($sid['url'])) {
     });
     </script>
     <!-- End of viaa Zendesk Widget script -->
+    <script>
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', "<?php echo $this->data['logoutURL']?>");
+      xhr.send();
+    </script>
   </body>
 </html>

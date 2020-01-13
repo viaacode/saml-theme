@@ -47,9 +47,6 @@ if (!is_null($sid['url'])) {
                  }?>
 	      </div>
 	      <div class="my2 small txt--center">
-		<p><a href="<?php echo $this->data['logoutURL']?>">Logout </a></p>
-	      </div>
-	      <div class="my2 small txt--center">
 		<p>Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@viaa.be</a></p>
 	      </div>
 	      <div class="txt--center mb1">
@@ -59,3 +56,10 @@ if (!is_null($sid['url'])) {
 	    <div class="grd-row-col-1-5"></div>
 	  </div>
 	</div>
+    <script>
+     let xhr = new XMLHttpRequest();
+     xhr.open('GET', "<?php echo $this->data['logoutURL']?>");
+     xhr.send();
+    </script>
+</body>
+</html>
