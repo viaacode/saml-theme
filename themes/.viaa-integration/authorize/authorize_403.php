@@ -5,15 +5,15 @@
 header('HTTP/1.0 403 Forbidden');
 
 if (!array_key_exists('StateId', $_REQUEST)) {
-        throw new SimpleSAML_Error_BadRequest('Missing required StateId query parameter.');
+        throw new SimpleSAML\Error\BadRequest('Missing required StateId query parameter.');
 }
 
 $id = $_REQUEST['StateId'];
 
 // sanitize the input
-$sid = SimpleSAML_Utilities::parseStateID($id);
+$sid = SimpleSAML\Utilities::parseStateID($id);
 if (!is_null($sid['url'])) {
-        SimpleSAML_Utilities::checkURLAllowed($sid['url']);
+        SimpleSAML\Utilities::checkURLAllowed($sid['url']);
 }
 
 ?>
@@ -25,8 +25,8 @@ if (!is_null($sid['url'])) {
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/furtive.min.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/app.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/furtive.min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/app.css') ?>">
   </head>
   <body>
     <div class="container">
@@ -36,7 +36,7 @@ if (!is_null($sid['url'])) {
             <div class="grd-row-col-1-5"></div>
             <div class="grd-row-col-3-5 bg--off-white brdr--light-gray">
               <div class="p2 py3 pb1 mb1 txt--center">
-                <img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
+                <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/Logo_Viaa_RGB_orange_kl.png') ?>" alt="Logo VIAA" style="width:120px">
               </div>
 	      <div class="alert alert-danger fnt--red mx2 bg--white" role="alert">
                  <?php

@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
   <meta name="robots" content="noindex">
 </head>
 
@@ -16,7 +16,7 @@
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
         <h1 class="c-brand c-brand--large">
-          <img src="<?php echo SimpleSAML_Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
+          <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
         </h1>
       </div>
       <hr class="c-hr">
