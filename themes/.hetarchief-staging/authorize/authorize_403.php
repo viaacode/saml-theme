@@ -3,15 +3,15 @@
 header('HTTP/1.0 403 Forbidden');
 
 if (!array_key_exists('StateId', $_REQUEST)) {
-        throw new SimpleSAML_Error_BadRequest('Missing required StateId query parameter.');
+        throw new SimpleSAML\Error\BadRequest('Missing required StateId query parameter.');
 }
 
 $id = $_REQUEST['StateId'];
 
 // sanitize the input
-$sid = SimpleSAML_Utilities::parseStateID($id);
+$sid = SimpleSAML\Utilities::parseStateID($id);
 if (!is_null($sid['url'])) {
-        SimpleSAML_Utilities::checkURLAllowed($sid['url']);
+        SimpleSAML\Utilities::checkURLAllowed($sid['url']);
 }
 
 if (isset($this->data['logoutURL'])) {
