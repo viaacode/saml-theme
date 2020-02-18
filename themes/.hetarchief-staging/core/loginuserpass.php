@@ -2,13 +2,15 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="nl">
 <head>
+  <title>
+    Inloggen - Het Archief
+  </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Inloggen - VIAA
-  </title>
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
-  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/eye.css') ?>">
+  <script src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/js/app.js') ?>"></script>
 </head>
 
 <body>
@@ -47,7 +49,11 @@
               </div>
             </div>
             <div class="o-form-group">
-              <label class="o-form-group__label" for="passwordId">Wachtwoord</label>
+              <label class="o-form-group__label" for="passwordId">
+                Wachtwoord
+                <img id="eye-open" onclick="toggleShowPassword('passwordId')" src="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJleWUiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTc2IDUxMiIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLWV5ZSBmYS13LTE4IGZhLTJ4Ij48cGF0aCBmaWxsPSIjMjVhNGNmIiBkPSJNNTcyLjUyIDI0MS40QzUxOC4yOSAxMzUuNTkgNDEwLjkzIDY0IDI4OCA2NFM1Ny42OCAxMzUuNjQgMy40OCAyNDEuNDFhMzIuMzUgMzIuMzUgMCAwIDAgMCAyOS4xOUM1Ny43MSAzNzYuNDEgMTY1LjA3IDQ0OCAyODggNDQ4czIzMC4zMi03MS42NCAyODQuNTItMTc3LjQxYTMyLjM1IDMyLjM1IDAgMCAwIDAtMjkuMTl6TTI4OCA0MDBhMTQ0IDE0NCAwIDEgMSAxNDQtMTQ0IDE0My45MyAxNDMuOTMgMCAwIDEtMTQ0IDE0NHptMC0yNDBhOTUuMzEgOTUuMzEgMCAwIDAtMjUuMzEgMy43OSA0Ny44NSA0Ny44NSAwIDAgMS02Ni45IDY2LjlBOTUuNzggOTUuNzggMCAxIDAgMjg4IDE2MHoiIGNsYXNzPSIiPjwvcGF0aD48L3N2Zz4K" />
+                <img id="eye-closed" onclick="toggleShowPassword('passwordId')" src="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJleWUtc2xhc2giIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1leWUtc2xhc2ggZmEtdy0yMCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48cGF0aCBmaWxsPSIjMjVhNGNmIiAgZD0iTTMyMCA0MDBjLTc1Ljg1IDAtMTM3LjI1LTU4LjcxLTE0Mi45LTEzMy4xMUw3Mi4yIDE4NS44MmMtMTMuNzkgMTcuMy0yNi40OCAzNS41OS0zNi43MiA1NS41OWEzMi4zNSAzMi4zNSAwIDAgMCAwIDI5LjE5Qzg5LjcxIDM3Ni40MSAxOTcuMDcgNDQ4IDMyMCA0NDhjMjYuOTEgMCA1Mi44Ny00IDc3Ljg5LTEwLjQ2TDM0NiAzOTcuMzlhMTQ0LjEzIDE0NC4xMyAwIDAgMS0yNiAyLjYxem0zMTMuODIgNTguMWwtMTEwLjU1LTg1LjQ0YTMzMS4yNSAzMzEuMjUgMCAwIDAgODEuMjUtMTAyLjA3IDMyLjM1IDMyLjM1IDAgMCAwIDAtMjkuMTlDNTUwLjI5IDEzNS41OSA0NDIuOTMgNjQgMzIwIDY0YTMwOC4xNSAzMDguMTUgMCAwIDAtMTQ3LjMyIDM3LjdMNDUuNDYgMy4zN0ExNiAxNiAwIDAgMCAyMyA2LjE4TDMuMzcgMzEuNDVBMTYgMTYgMCAwIDAgNi4xOCA1My45bDU4OC4zNiA0NTQuNzNhMTYgMTYgMCAwIDAgMjIuNDYtMi44MWwxOS42NC0yNS4yN2ExNiAxNiAwIDAgMC0yLjgyLTIyLjQ1em0tMTgzLjcyLTE0MmwtMzkuMy0zMC4zOEE5NC43NSA5NC43NSAwIDAgMCA0MTYgMjU2YTk0Ljc2IDk0Ljc2IDAgMCAwLTEyMS4zMS05Mi4yMUE0Ny42NSA0Ny42NSAwIDAgMSAzMDQgMTkyYTQ2LjY0IDQ2LjY0IDAgMCAxLTEuNTQgMTBsLTczLjYxLTU2Ljg5QTE0Mi4zMSAxNDIuMzEgMCAwIDEgMzIwIDExMmExNDMuOTIgMTQzLjkyIDAgMCAxIDE0NCAxNDRjMCAyMS42My01LjI5IDQxLjc5LTEzLjkgNjAuMTF6Ij48L3BhdGg+PC9zdmc+Cg==g" />
+              </label>
               <div class="o-form-group__controls">
                 <input name="password" class="c-input" id="passwordId" type="password">
               </div>

@@ -1,0 +1,11 @@
+#eye-closed, #eye-open {
+    cursor: pointer;
+    float: right;
+    width: 19px;
+    height: 24px;
+    color: #25a4cf;
+    margin-right: 5px;
+}
+#eye-open {
+  display: none;
+}
