@@ -15,12 +15,12 @@ switch ($env) {
       break;
 }
 
-$query = isset($_GET["AuthState"]) ? htmlspecialchars($_GET["AuthState"]) : NULL;
+$query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 
-if (!empty($query) {
-  $query = urldecode($query);
-  foreach (explode('&', $query) as $chunk) {
-    print $chunck;
+if (!empty($query)) {
+  $params = urldecode($query);
+  foreach (explode('&', $params) as $param) {
+    print $param;
   }
 }
 
