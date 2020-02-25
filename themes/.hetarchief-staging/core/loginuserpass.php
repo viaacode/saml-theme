@@ -21,7 +21,7 @@ if (!empty($query)) {
   parse_str(urldecode($query),$params);
   if (!empty($params['RelayState'])) {
     $relay_state = json_decode($params['RelayState']);
-    $redirect_to = $relay_state[0];
+    print $relay_state;
   }
 } else {
   $redirect_to = "https://".$prefix."hetarchief.be";
