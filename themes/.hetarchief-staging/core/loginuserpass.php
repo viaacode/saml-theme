@@ -19,9 +19,8 @@ $query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 
 if (!empty($query)) {
   $params = urldecode($query);
-  foreach (explode('&', $params) as $param) {
-    echo $param, PHP_EOL;
-  }
+  parse_str($params,$param);
+  echo $param['RelayState'];
 }
 
 
