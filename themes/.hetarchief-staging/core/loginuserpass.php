@@ -20,7 +20,7 @@ $query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 if (!empty($query)) {
   $params = urldecode($query);
   foreach (explode('&', $params) as $param) {
-    print $param;
+    echo $param, PHP_EOL;
   }
 }
 
