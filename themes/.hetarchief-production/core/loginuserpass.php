@@ -25,7 +25,8 @@ $redirect_to = isset($_GET["returnToUrl"]) ? htmlspecialchars($_GET["returnToUrl
     Inloggen - Het Archief
   </title>
   <meta charset="utf-8">
-  <meta name="application-name" content="idp<?php echo " ".$env;?>"
+  <meta name="application-name" content="idp<?php echo " ".$env;?>">
+  <meta name="description" content="<?php echo htmlspecialchars($_GET["returnToUrl"]); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
