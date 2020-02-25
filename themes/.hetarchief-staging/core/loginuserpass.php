@@ -1,3 +1,22 @@
+<?php
+$env = "staging";
+switch ($env) {
+  case "integration":
+      $prefix= "tst.";
+      break;
+  case "development":
+      $prefix= "tst.";
+      break;
+  case "staging":
+      $prefix= "qas.";
+      break;
+  case "production":
+      $prefix= "";
+      break;
+}
+$redirect_to = isset($_GET["returnToUrl"]) ? htmlspecialchars($_GET["returnToUrl"]): "https://".$prefix."hetarchief.be";
+?>
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="nl">
@@ -106,7 +125,7 @@
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="http://account-qas.hetarchief.be/users/password/new?redirect_to=https://qas.hetarchief.be">Wachtwoord vergeten?</a>
+              <a href="http://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo $redirect_to; ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
