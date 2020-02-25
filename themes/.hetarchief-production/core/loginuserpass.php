@@ -14,7 +14,7 @@ switch ($env) {
       $prefix= "";
       break;
 }
-$redirect_to = isset($_GET["returnTo"]) ? htmlspecialchars($_GET["returnTo"]): "https://".$prefix."hetarchief.be";
+$redirect_to = isset($_GET["returnToUrl"]) ? htmlspecialchars($_GET["returnToUrl"]): "https://".$prefix."hetarchief.be";
 ?>
 
 
