@@ -14,7 +14,18 @@ switch ($env) {
       $prefix= "";
       break;
 }
-$redirect_to = isset($_GET["returnToUrl"]) ? htmlspecialchars($_GET["returnToUrl"]): "https://".$prefix."hetarchief.be";
+
+$query = isset($_GET["AuthState"]) ? htmlspecialchars($_GET["AuthState"]) : NULL;
+
+if (!empty($query) {
+  $query = urldecode($query);
+  foreach (explode('&', $query) as $chunk) {
+    print $chunck;
+  }
+}
+
+
+$redirect_to = "https://".$prefix."hetarchief.be";
 ?>
 
 
