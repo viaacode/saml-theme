@@ -18,13 +18,15 @@ switch ($env) {
 $query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 
 if (!empty($query)) {
-  $params = urldecode($query);
-  parse_str($params,$param);
-  echo $param['RelayState'];
+  parse_str(urldecode($query),$params);
+  if (!empty($params['RelayState'])) {
+    $relay_state = json_decode($params['RelayState']);
+    $redirect_to = $relay_state[0];
+  }
+} else {
+  $redirect_to = "https://".$prefix."hetarchief.be";
 }
 
-
-$redirect_to = "https://".$prefix."hetarchief.be";
 ?>
 
 
