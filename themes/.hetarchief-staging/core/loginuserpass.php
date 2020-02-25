@@ -20,11 +20,12 @@ $query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 if (!empty($query)) {
   parse_str(urldecode($query),$params);
   if (!empty($params['RelayState'])) {
-    $relay_state = json_decode($params['RelayState']);
-    print $relay_state;
-  }
-} else {
+    echo $params['RelayState'];
+    //$relay_state = json_decode($params['RelayState']);
+    //print $relay_state;
+  } else {
   $redirect_to = "https://".$prefix."hetarchief.be";
+  }
 }
 
 ?>
