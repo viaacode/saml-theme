@@ -21,7 +21,7 @@ if (!empty($query)) {
   parse_str(urldecode($query),$params);
   echo $params;
   if (!empty($params['RelayState'])) {
-    echo $params['RelayState'][0];
+    var_dump($params['RelayState'][0]);
     $relay_state = json_decode($params['RelayState'][0]);
     var_dump($relay_state['returnToUrl']);
   } else {
