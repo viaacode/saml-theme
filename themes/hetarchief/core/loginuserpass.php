@@ -19,7 +19,7 @@ $query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 
 if (!empty($query)) {
   parse_str(urldecode($query),$params);
-  echo $params;
+  var_dump($params);
   if (!empty($params['RelayState'])) {
     var_dump($params['RelayState'][0]);
     $relay_state = json_decode($params['RelayState'][0]);
