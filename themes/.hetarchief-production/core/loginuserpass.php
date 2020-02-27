@@ -19,17 +19,13 @@ $query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
 
 if (!empty($query)) {
   parse_str(urldecode($query),$params);
-  var_dump($params);
-  if (!empty($params['RelayState'])) {
-    var_dump($params['RelayState'][0]);
+    if (!empty($params['RelayState'])) {
     $relay_state = json_decode($params['RelayState'][0]);
-    var_dump($relay_state['returnToUrl']);
+    $redirect_to = $relay_state->returnToUrl;
   } else {
   $redirect_to = "https://".$prefix."hetarchief.be";
   }
 }
-
-// echo $redirect_to;
 
 ?>
 
@@ -51,6 +47,7 @@ if (!empty($query)) {
 </head>
 
 <body>
+<!-- <?php var_dump($params); ?> -->
   <div class="o-container-vertical">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
