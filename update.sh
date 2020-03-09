@@ -4,14 +4,14 @@
 
 function account_portal_url {
     case $1 in
-        "hetarchief") 
+        "hetarchief")
             case $2 in
                 production)
-                    Url="http://account.hetarchief.be/users/password/new?redirect_to=https://hetarchief.be";;
+                    Url="http://account.hetarchief.be/users/password/new?redirect_to=";;
                 staging)
-                    Url="http://account-qas.hetarchief.be/users/password/new?redirect_to=https://qas.hetarchief.be";;
+                    Url="http://account-qas.hetarchief.be/users/password/new?redirect_to=";;
                 *)
-                    Url="http://account-tst.hetarchief.be/users/password/new?redirect_to=https://tst.hetarchief.be";;
+                    Url="http://account-tst.hetarchief.be/users/password/new?redirect_to=";;
             esac
             ;;
         *)
@@ -39,7 +39,7 @@ for Theme in *; do
         find . -type f | while read File; do
            echo "Processing $File"
            sed -r -s \
-               -e "s|%%SSUM_URL%%|$SsumUrl|g" $File \
+               -e "s|%%SSUM_URL%%|$SsumUrl|g" -e "s|%%ENV%%|$Env|g" $File \
                >../$Dirname/$File
        done
        cd ..

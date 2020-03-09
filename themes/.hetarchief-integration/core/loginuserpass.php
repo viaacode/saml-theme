@@ -1,3 +1,34 @@
+<?php
+$env = "integration";
+switch ($env) {
+  case "integration":
+      $prefix= "tst.";
+      break;
+  case "development":
+      $prefix= "tst.";
+      break;
+  case "staging":
+      $prefix= "qas.";
+      break;
+  case "production":
+      $prefix= "";
+      break;
+}
+
+$query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
+
+if (!empty($query)) {
+  parse_str(urldecode($query),$params);
+    if (!empty($params['RelayState'])) {
+    $relay_state = json_decode($params['RelayState']);
+    $redirect_to = $relay_state->returnToUrl;
+  } else {
+  $redirect_to = "https://".$prefix."hetarchief.be";
+  }
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="nl">
@@ -6,6 +37,8 @@
     Inloggen - Het Archief
   </title>
   <meta charset="utf-8">
+  <meta name="application-name" content="idp<?php echo " ".$env;?>">
+  <meta name="description" content="<?php echo htmlspecialchars($_GET["returnToUrl"]); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
@@ -14,6 +47,7 @@
 </head>
 
 <body>
+<!-- <?php var_dump($params); ?> -->
   <div class="o-container-vertical">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
@@ -106,7 +140,7 @@
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="http://account-tst.hetarchief.be/users/password/new?redirect_to=https://tst.hetarchief.be">Wachtwoord vergeten?</a>
+              <a href="http://account-tst.hetarchief.be/users/password/new?redirect_to=<?php echo $redirect_to; ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
