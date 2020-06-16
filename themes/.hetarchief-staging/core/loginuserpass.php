@@ -59,6 +59,7 @@ if (!empty($query)) {
 <body>
 <script>
 <?php echo "console.log(".json_encode(get_defined_vars(), JSON_HEX_TAG).");"; ?>
+<?php echo "console.log(".json_encode($this->data, JSON_HEX_TAG).");"; ?>
 </script>
   <div class="o-container-vertical">
     <div class="o-container o-container--small">
@@ -69,7 +70,7 @@ if (!empty($query)) {
       </div>
       <hr class="c-hr">
       <?php if ($this->data['errorcode'] !== NULL) { ?>
-      <div class="c-alert">
+      <div class="c-alert c-alert--danger">
         <div class="c-alert__body">
           <div class="u-spacer-right-s">
             <div class="o-svg-icon o-svg-icon-button-multicolor-circle-warning  ">
@@ -84,6 +85,23 @@ if (!empty($query)) {
         </div>
       </div>
       <?php } ?>
+      <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && $this->data['SPMetadata']['entityid'] == "http://avo2-dev/sp")  { ?>
+      <div class="u-spacer-top-l">
+        <div class="c-alert c-alert--info">
+	  <div class="o-flex o-flex--vertical">  
+	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je aanmeldt met je 'Het Archief'-account?<br />
+	      Dan moet je eerst je wachtwoord nog instellen.</p>
+	   <p class="o-flex__item u-spacer-s u-text-center">
+              <button class="c-button c-button--primary">
+                 <div class="c-button__content">
+                   <div class="c-button__label">Naar wachtwoord instellen</div>
+                 </div>
+               </button>
+           </p>
+        </div>
+      </div>
+      <?php } ?>
+      <hr class="c-hr">
       <h3 class="c-h2">Inloggen</h3>
       <form name="loginform" id="loginform" action="?" method="post">
         <div class="u-spacer-bottom-l">
