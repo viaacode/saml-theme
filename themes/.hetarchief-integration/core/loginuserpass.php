@@ -100,8 +100,8 @@ if (!empty($query)) {
            </p>
         </div>
       </div>
-      <?php } ?>
       <hr class="c-hr">
+      <?php } ?>
       <h3 class="c-h2">Inloggen</h3>
       <form name="loginform" id="loginform" action="?" method="post">
         <div class="u-spacer-bottom-l">
