@@ -120,7 +120,7 @@ if (!empty($query)) {
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="http://account-tst.hetarchief.be/users/password/new?redirect_to=<?php echo $redirect_to; ?>">Wachtwoord vergeten?</a>
+              <a href="http://account-tst.hetarchief.be/users/password/new?redirect_to=<?php echo $sid['url']; ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>

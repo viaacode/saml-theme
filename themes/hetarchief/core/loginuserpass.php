@@ -120,7 +120,7 @@ if (!empty($query)) {
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="%%SSUM_URL%%<?php echo $redirect_to; ?>">Wachtwoord vergeten?</a>
+              <a href="%%SSUM_URL%%<?php echo $sid['url']; ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
