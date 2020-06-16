@@ -15,8 +15,18 @@ switch ($env) {
       break;
 }
 
-$query = isset($_GET["AuthState"]) ? ($_GET["AuthState"]) : NULL;
+$state = isset($_REQUEST["AuthState"]) ? ($_REQUEST["AuthState"]) : NULL;
 
+// sanitize the input
+$sid = SimpleSAML\Utilities::parseStateID($state);
+if (!is_null($sid['url'])) {
+  SimpleSAML\Utilities::checkURLAllowed($sid['url']);
+  }
+
+/*
+ * Deprecated by the above
+ * Legacy for reference
+ 
 if (!empty($query)) {
   parse_str(urldecode($query),$params);
     if (!empty($params['RelayState'])) {
@@ -26,6 +36,7 @@ if (!empty($query)) {
   $redirect_to = "https://".$prefix."hetarchief.be";
   }
 }
+*/
 
 ?>
 
@@ -38,7 +49,6 @@ if (!empty($query)) {
   </title>
   <meta charset="utf-8">
   <meta name="application-name" content="idp<?php echo " ".$env;?>">
-  <meta name="description" content="<?php echo htmlspecialchars($_GET["returnToUrl"]); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief.css') ?>">
@@ -47,7 +57,9 @@ if (!empty($query)) {
 </head>
 
 <body>
-<!-- <?php var_dump($params); ?> -->
+<script>
+<?php echo "console.log(".json_encode(get_defined_vars(), JSON_HEX_TAG).");"; ?>
+</script>
   <div class="o-container-vertical">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
