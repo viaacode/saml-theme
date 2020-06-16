@@ -50,45 +50,45 @@
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/montserrat-regular.eot");
-  src: url("../fonts/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff"); }
+  src: url("/fonts/montserrat-regular.eot");
+  src: url("/fonts/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-regular.woff2") format("woff2"), url("/fonts/montserrat-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
   font-style: italic;
-  src: url("../fonts/montserrat-italic.eot");
-  src: url("../fonts/montserrat-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-italic.woff2") format("woff2"), url("../fonts/montserrat-italic.woff") format("woff"); }
+  src: url("/fonts/montserrat-italic.eot");
+  src: url("/fonts/montserrat-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-italic.woff2") format("woff2"), url("/fonts/montserrat-italic.woff") format("woff"); }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
   font-style: normal;
-  src: url("../fonts/montserrat-medium.eot");
-  src: url("../fonts/montserrat-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff"); }
+  src: url("/fonts/montserrat-medium.eot");
+  src: url("/fonts/montserrat-medium.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-medium.woff2") format("woff2"), url("/fonts/montserrat-medium.woff") format("woff"); }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
-  src: url("../fonts/montserrat-bold.eot");
-  src: url("../fonts/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff"); }
+  src: url("/fonts/montserrat-bold.eot");
+  src: url("/fonts/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-bold.woff2") format("woff2"), url("/fonts/montserrat-bold.woff") format("woff"); }
 
 @font-face {
   font-family: "Avenir LT Std";
   font-weight: 600;
-  src: url("../fonts/avenir-lt-std-heavy.eot");
-  src: url("../fonts/avenir-lt-std-heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-lt-std-heavy.woff2") format("woff2"), url("../fonts/avenir-lt-std-heavy.woff") format("woff"), url("../fonts/avenir-lt-std-heavy.ttf") format("truetype"); }
+  src: url("/fonts/avenir-lt-std-heavy.eot");
+  src: url("/fonts/avenir-lt-std-heavy.eot?#iefix") format("embedded-opentype"), url("/fonts/avenir-lt-std-heavy.woff2") format("woff2"), url("/fonts/avenir-lt-std-heavy.woff") format("woff"), url("/fonts/avenir-lt-std-heavy.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Avenir LT Std";
   font-weight: 500;
-  src: url("../fonts/avenir-lt-std-medium.eot");
-  src: url("../fonts/avenir-lt-std-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-lt-std-medium.woff2") format("woff2"), url("../fonts/avenir-lt-std-medium.woff") format("woff"), url("../fonts/avenir-lt-std-medium.ttf") format("truetype"); }
+  src: url("/fonts/avenir-lt-std-medium.eot");
+  src: url("/fonts/avenir-lt-std-medium.eot?#iefix") format("embedded-opentype"), url("/fonts/avenir-lt-std-medium.woff2") format("woff2"), url("/fonts/avenir-lt-std-medium.woff") format("woff"), url("/fonts/avenir-lt-std-medium.ttf") format("truetype"); }
 
 /* Generic: CSS reset, box-sizing, global CSS tweaks
    ========================================================================== */
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -1492,7 +1492,7 @@ button.c-button {
 .c-radio input[type='radio']:active,
 .c-radio input[type='radio']:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(85, 120, 145, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(85, 120, 145, 0.5);
   border-color: #557891;
   transition: 0.14s box-shadow ease-in-out; }
 
@@ -1501,14 +1501,14 @@ button.c-button {
    ========================================================================== */
 .c-checkbox input[type='checkbox'] {
   background: #FFF;
-  border: 1px solid #557891;
-  border-radius: 3px;
+  border: 0.1rem solid #557891;
+  border-radius: 0.3rem;
   height: 1.6rem;
   width: 1.6rem;
   margin: 0 0.8rem 0 0; }
   .c-checkbox input[type='checkbox']:before {
-    width: 16px;
-    height: 16px;
+    width: 1.6rem;
+    height: 1.6rem;
     left: -0.1rem;
     top: -0.1rem;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
@@ -1519,18 +1519,18 @@ button.c-button {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cpath id='Rectangle' d='M12,8c0,-0.552 -0.448,-1 -1,-1l-6,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l6,0c0.552,0 1,-0.448 1,-1Z' style='fill:%23fff;'/%3E%3C/svg%3E") no-repeat; }
 
 .c-checkbox input[type='checkbox'][disabled] {
-  border: 1px solid #557891; }
+  border: 0.1rem solid #557891; }
   .c-checkbox input[type='checkbox'][disabled]:checked:before {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
 
 .c-checkbox input[type='checkbox'][disabled]:not(:checked):before {
-  border-radius: 1px;
-  width: 10px;
-  height: 10px;
+  border-radius: 0.1rem;
+  width: 1rem;
+  height: 1rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: 1px solid #557891;
+  background: 0.1rem solid #557891;
   opacity: 1; }
 
 .c-checkbox input[type='checkbox']:checked:not([disabled]),
@@ -1542,7 +1542,7 @@ button.c-button {
    ========================================================================== */
 .c-radio input[type='radio'] {
   background: #FFF;
-  border: 1px solid #557891;
+  border: 0.1rem solid #557891;
   border-radius: 100%;
   height: 1.6rem;
   width: 1.6rem;
@@ -1558,11 +1558,11 @@ button.c-button {
   border-radius: 100%; }
 
 .c-radio input[type='radio'][disabled] {
-  border-color: 1px solid #557891; }
+  border-color: 0.1rem solid #557891; }
   .c-radio input[type='radio'][disabled]:before {
     background: #FFF; }
   .c-radio input[type='radio'][disabled]:checked:before {
-    background: 1px solid #557891; }
+    background: 0.1rem solid #557891; }
 
 /* Inline checkbox and Radio
    ========================================================================== */
@@ -1898,29 +1898,8 @@ button.c-button {
     position: relative; }
 
 .c-filter-dropdown {
-  border: 1px solid #BAC7D1;
-  border-radius: 0.3rem;
-  height: 3.6rem;
-  -ms-flex-align: center;
-      align-items: center;
   display: -ms-flexbox;
-  display: flex;
-  background: #EDEFF2; }
-
-.c-filter-dropdown__link {
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  display: -ms-flexbox;
-  display: flex;
-  color: inherit;
-  padding: 0.2rem 1rem 0.2rem 1.2rem;
-  text-decoration: none;
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto; }
-  .c-filter-dropdown__link + .c-filter-dropdown__link {
-    padding: 0.2rem 1rem 0.2rem 0; }
+  display: flex; }
 
 .c-filter-dropdown__label {
   margin-right: 0.4rem; }
@@ -3219,8 +3198,9 @@ textarea.c-input--h-large {
   border-radius: 0.3rem;
   font-size: inherit;
   height: 3.6rem;
-  padding: 0.8rem 2.8rem 0.8rem 0.8rem;
-  width: 100%; }
+  padding: 0.6rem 2.8rem 0.6rem 0.8rem;
+  width: 100%;
+  line-height: 1.8rem; }
   .c-select:focus {
     outline: 0;
     border-color: #25A4CF;
@@ -3767,7 +3747,8 @@ th.c-table__header--sortable {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 0.3rem; }
+  border-radius: 0.3rem;
+  overflow: hidden; }
 
 .c-thumbnail-placeholder {
   display: -ms-flexbox;
@@ -4287,8 +4268,8 @@ th.c-table__header--sortable {
 /* ==========================================================================
    Theme mixin : Put all skin css related code here
 
-   Take in inputs colors variables and output a theme skin,
-   the default theme is dark if the mixin is used without any variables.
+   Take in inputs colors variables and output a theme skin, 
+   the default theme is dark if the mixin is used without any variables. 
 
    Please group CSS by files to have an easy way to know what belong to where
 
