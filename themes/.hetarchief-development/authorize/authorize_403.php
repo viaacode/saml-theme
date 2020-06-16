@@ -2,6 +2,24 @@
 // original file:  /var/www/simplesaml/modules/authorize/www/authorize_403.php
 header('HTTP/1.0 403 Forbidden');
 
+// $this->includeAtTemplateBase('includes/env.php');
+$env = "development";
+switch ($env) {
+  case "integration":
+    $prefix= "-tst";
+  break;
+  case "development":
+    $prefix= "-tst";
+  break;
+  case "staging":
+    $prefix= "-qas";
+  break;
+  case "production":
+    $prefix= "";
+  break;
+}
+
+echo "<!--". ($env) .": ".$prefix." -->";
 if (!array_key_exists('StateId', $_REQUEST)) {
         throw new SimpleSAML\Error\BadRequest('Missing required StateId query parameter.');
 }
@@ -19,6 +37,22 @@ if (isset($this->data['logoutURL'])) {
 } else {
   $logoutURL = 'logout.php';
 }
+
+$reconfirm_URL = "https://account".$prefix.".hetarchief.be/account/herconfirmeer?redirect_to=";
+
+$message = "<p>";
+
+if (isset($this->data['reject_msg'])) {
+  $message .= $this->data['reject_msg']['nl'];
+  $message .= "<br /><br />";
+  $message .= "Geen bevestigingsmail ontvangen? <a href=\"".$reconfirm_URL.urlencode($sid['url'])."\">Vraag een nieuwe mail aan.</a>";
+} else {
+  $message = 'Sorry, je hebt geen toegang tot deze toepassing.';
+}
+
+$message .= "<br /><br />";
+$message .= "Vragen? Contacteer <a href=i\"mailto:support@meemoo.be?subject=Probleem%20met%20aanmelden%20hetarchief-account\">support@meemoo.be</a>";
+$message .= "</p>";
 
 ?>
 
@@ -55,16 +89,7 @@ if (isset($this->data['logoutURL'])) {
               </svg>
             </div>
           </div>
-          <p>
-          <?php
-                 if (isset($this->data['reject_msg'])) {
-                   echo $this->data['reject_msg']['nl'];
-                 } else {
-                   echo 'Sorry, je hebt geen toegang tot deze toepassing.';
-                 }?>
-          <br />
-          Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@viaa.be</a>
-          </p>
+          <?php echo $message;?>
         </div>
       </div>
       <hr class="c-hr">
@@ -87,5 +112,6 @@ if (isset($this->data['logoutURL'])) {
      xhr.open('GET', "<?php echo $logoutURL;?>");
      xhr.send();
   </script>
+<?php $this->includeAtTemplateBase('includes/zendesk.php');?>
 </body>
 </html>
