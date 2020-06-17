@@ -85,7 +85,7 @@ if (!empty($query)) {
         </div>
       </div>
       <?php } ?>
-      <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && $this->data['SPMetadata']['entityid'] == "http://avo2-dev/sp")  { ?>
+      <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && preg_match('/avo2/', $this->data['SPMetadata']['entityid']))  { ?>
       <div class="u-spacer-top-l">
         <div class="c-alert c-alert--info">
 	  <div class="o-flex o-flex--vertical">  
