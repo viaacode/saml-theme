@@ -51,7 +51,7 @@ if (isset($this->data['reject_msg'])) {
 }
 
 $message .= "<br /><br />";
-$message .= "Vragen? Contacteer <a href=i\"mailto:support@meemoo.be?subject=Probleem%20met%20aanmelden%20hetarchief-account\">support@meemoo.be</a>";
+$message .= "Vragen? Contacteer <a href=\"mailto:support@meemoo.be?subject=Probleem%20met%20aanmelden%20hetarchief-account\">support@meemoo.be</a>";
 $message .= "</p>";
 
 ?>
@@ -108,10 +108,26 @@ $message .= "</p>";
   </div>
 
   <script>
-     let xhr = new XMLHttpRequest();
-     xhr.open('GET', "<?php echo $logoutURL;?>");
-     xhr.send();
-  </script>
+  fetch('<?php echo $logoutURL; ?>')
+  .then(
+    function(response) {
+      console.log(response.headers.get('Content-Type'));
+      console.log(response.headers.get('Date'));
+      console.log(response.status);
+      console.log(response.statusText);
+      console.log(response.type);
+      console.log(response.url);
+      if (response.status !== 200) {
+        console.log('Logout failed with status ' + response.status)
+        return;
+      }
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Logout Error :-S', err);
+  });
+</script>
+
 <?php $this->includeAtTemplateBase('includes/zendesk.php');?>
 </body>
 </html>
