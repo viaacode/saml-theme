@@ -88,7 +88,7 @@ if (!empty($query)) {
       <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && preg_match('/avo2/', $this->data['SPMetadata']['entityid']))  { ?>
       <div class="u-spacer-top-l">
         <div class="c-alert c-alert--info">
-	  <div class="o-flex o-flex--vertical">  
+	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">  
 	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je aanmeldt met je 'Het Archief'-account?<br />
 	      Dan moet je eerst je wachtwoord nog instellen.</p>
 	   <p class="o-flex__item u-spacer-s u-text-center">

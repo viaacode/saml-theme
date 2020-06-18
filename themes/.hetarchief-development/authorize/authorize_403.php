@@ -33,7 +33,7 @@ if (!is_null($sid['url'])) {
 }
 
 if (isset($this->data['logoutURL'])) {
-  $logoutURL = htmlspecialchars($this->data['logoutURL']);
+  $logoutURL = $this->data['logoutURL'];
 } else {
   $logoutURL = 'logout.php';
 }
