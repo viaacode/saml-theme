@@ -49,7 +49,7 @@ if (!is_null($sid['url'])) {
 		 }?>
 	      </div>
               <div class="my2 small txt--center">
-                <p>Vragen? Contacteer <a href="mailto:support@viaa.be?subject=Toegang%20met%20VIAA-account">support@meemoo.be</a></p>
+                <p>Vragen? Contacteer <a href="mailto:support@meemoo.be?subject=Toegang%20met%20meemoo-account">support@meemoo.be</a></p>
               </div>
               <div class="txt--center mb1">
                 <span class="small fnt--mid-gray">© 2020 / <a href="http://www.viaa.be">www.meemoo.be</a></span>
