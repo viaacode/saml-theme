@@ -51,7 +51,7 @@ if ($this->data['errorcode'] !== NULL) {
 									?>
 									<button type="submit" name="wp-submit" id="wp-submit" class="btn btn--meemoo flt--right my1" style="padding:0rem 1rem;">Login</button>
 									<p class="my2 small">
-										<code><a href="%%SSUM_URL%%">Wachtwoord vergeten?</a></code>
+										<span><a href="%%SSUM_URL%%">Wachtwoord vergeten?</a></span>
 									</p>
 								</form>
 							</div>
