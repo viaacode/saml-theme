@@ -18,7 +18,7 @@
 						<div class="grd-row-col-1-5"></div>
 						<div class="grd-row-col-3-5 bg--off-white brdr--light-gray">
 							<div class="p2 py3 pb1 mb1 txt--center">
-								<img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/30c6269d-8c77-4be1-987b-260620de88b0.png') ?>" alt="Logo meemoo" style="width:120px">
+								<img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/30c6269d-8c77-4be1-987b-260620de88b0.png') ?>" alt="Logo meemoo" style="width:75%">
 							</div>
 <?php
 if ($this->data['errorcode'] !== NULL) {
