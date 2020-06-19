@@ -6,7 +6,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/furtive.min.css') ?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/app.css') ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/app-ab44afa1-f3b3-4249-b294-1bb638329f5a.css') ?>">
 		<link rel="icon" type="image/png" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/meemoo_favicon-306d29737c36438ecc5387780be080cc0516d0e71774edb3a47a62ef5a7a00cd.png') ?>" sizes="32x32" />
 		<link rel="icon" type="image/png" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/meemoo_favicon-306d29737c36438ecc5387780be080cc0516d0e71774edb3a47a62ef5a7a00cd.png') ?>" sizes="16x16" />
 	</head>
