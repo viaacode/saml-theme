@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>
-			Aanmelden bij VIAA
+			Aanmelden bij meemoo
 		</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,12 +51,12 @@ if ($this->data['errorcode'] !== NULL) {
 									?>
 									<button type="submit" name="wp-submit" id="wp-submit" class="btn btn--meemoo flt--right my1" style="padding:0rem 1rem;">Login</button>
 									<p class="my2 small">
-										<code><a href="https://accounts.viaa.be/pwm/public/ForgottenPassword">Wachtwoord vergeten?</a></code>
+										<span><a href="https://accounts.viaa.be/pwm/public/ForgottenPassword">Wachtwoord vergeten?</a></span>
 									</p>
 								</form>
 							</div>
 							<div class="txt--center mb1">
-								<code class="small fnt--mid-gray">© 2016 / <a href="http://www.viaa.be">www.viaa.be</a></code>
+								<span class="small fnt--mid-gray">© 2020 / <a href="http://www.meemoo.be">www.meemoo.be</a></span>
 							</div>
 						</div>
 						<div class="grd-row-col-1-5"></div>
