@@ -49,7 +49,7 @@ if ($this->data['errorcode'] !== NULL) {
 									        echo('<input type="hidden" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" />');
 									}
 									?>
-									<button type="submit" name="wp-submit" id="wp-submit" class="btn btn--blue flt--right my1" style="padding:0rem 1rem;">Login</button>
+									<button type="submit" name="wp-submit" id="wp-submit" class="btn btn--meemoo flt--right my1" style="padding:0rem 1rem;">Login</button>
 									<p class="my2 small">
 										<code><a href="%%SSUM_URL%%">Wachtwoord vergeten?</a></code>
 									</p>
