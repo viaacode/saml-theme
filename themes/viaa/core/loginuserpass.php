@@ -56,7 +56,7 @@ if ($this->data['errorcode'] !== NULL) {
 								</form>
 							</div>
 							<div class="txt--center mb1">
-								<code class="small fnt--mid-gray">© 2016 / <a href="http://www.viaa.be">www.viaa.be</a></code>
+								<span class="small fnt--mid-gray">© 2020 / <a href="http://www.meemoo.be">www.meemoo.be</a></span>
 							</div>
 						</div>
 						<div class="grd-row-col-1-5"></div>
