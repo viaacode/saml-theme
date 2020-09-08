@@ -45,13 +45,13 @@ $message = "<p>";
 if (isset($this->data['reject_msg'])) {
   $message .= $this->data['reject_msg']['nl'];
   $message .= "<br /><br />";
-  $message .= "Geen bevestigingsmail ontvangen? <a href=\"".$reconfirm_URL.urlencode($sid['url'])."\">Vraag een nieuwe mail aan.</a>";
+  $message .= "Geen bevestigingsmail ontvangen? Check je spamfolder of <a href=\"".$reconfirm_URL.urlencode($sid['url'])."\">vraag een nieuwe mail aan.</a>";
 } else {
   $message = 'Sorry, je hebt geen toegang tot deze toepassing.';
 }
 
 $message .= "<br /><br />";
-$message .= "Vragen? Contacteer <a href=\"mailto:support@meemoo.be?subject=Probleem%20met%20aanmelden%20hetarchief-account\">support@meemoo.be</a>";
+$message .= "Hulp nodig? Neem contact op via de feedback-knop rechtsonder deze pagina.";
 $message .= "</p>";
 
 ?>
