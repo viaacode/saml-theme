@@ -7,11 +7,11 @@ function account_portal_url {
         "hetarchief")
             case $2 in
                 production)
-                    Url="http://account.hetarchief.be/users/password/new?redirect_to=";;
+                    Url="https://account.hetarchief.be/users/password/new?redirect_to=";;
                 staging)
-                    Url="http://account-qas.hetarchief.be/users/password/new?redirect_to=";;
+                    Url="https://account-qas.hetarchief.be/users/password/new?redirect_to=";;
                 *)
-                    Url="http://account-tst.hetarchief.be/users/password/new?redirect_to=";;
+                    Url="https://ldap-ssum-dev.apps.do.viaa.be/users/password/new?redirect_to=";;
             esac
             ;;
         *)

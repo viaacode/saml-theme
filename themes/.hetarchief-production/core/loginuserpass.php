@@ -26,7 +26,7 @@ if (!is_null($sid['url'])) {
 /*
  * Deprecated by the above
  * Legacy for reference
- 
+
 if (!empty($query)) {
   parse_str(urldecode($query),$params);
     if (!empty($params['RelayState'])) {
@@ -88,13 +88,13 @@ if (!empty($query)) {
       <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && preg_match('/avo2/', $this->data['SPMetadata']['entityid']))  { ?>
       <div class="u-spacer-top-l">
         <div class="c-alert c-alert--info">
-	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">  
+	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
 	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je aanmeldt met je 'Het Archief'-account?<br />
 	      Dan moet je eerst je wachtwoord nog instellen.</p>
 	   <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
                  <div class="c-button__content">
-		 <div class="c-button__label"><a href="http://account.hetarchief.be/users/password/new?redirect_to=<?php echo $sid['url']; ?>">Naar wachtwoord instellen</a></div>
+		 <div class="c-button__label"><a href="https://account.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Naar wachtwoord instellen</a></div>
                  </div>
                </button>
            </p>
@@ -138,7 +138,7 @@ if (!empty($query)) {
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="http://account.hetarchief.be/users/password/new?redirect_to=<?php echo $sid['url']; ?>">Wachtwoord vergeten?</a>
+              <a href="https://account.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
