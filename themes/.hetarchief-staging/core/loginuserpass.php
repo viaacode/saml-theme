@@ -94,7 +94,7 @@ if (!empty($query)) {
 	   <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
                  <div class="c-button__content">
-		 <div class="c-button__label"><a href="http://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Naar wachtwoord instellen</a></div>
+		 <div class="c-button__label"><a href="https://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Naar wachtwoord instellen</a></div>
                  </div>
                </button>
            </p>
@@ -138,7 +138,7 @@ if (!empty($query)) {
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="http://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
+              <a href="https://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
