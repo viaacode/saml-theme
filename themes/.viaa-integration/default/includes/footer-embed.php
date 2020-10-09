@@ -1,3 +1,7 @@
+    <!-- Start of meemoo Zendesk Widget script -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=6bfc8294-ce0c-4e40-92de-35b855c49a84"> </script>
+    <!-- End of meemoo Zendesk Widget script -->
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
