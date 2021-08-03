@@ -89,7 +89,7 @@ if (!empty($query)) {
       <div class="u-spacer-top-l">
         <div class="c-alert c-alert--info">
 	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
-	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je aanmeldt met je 'Het Archief'-account?<br />
+	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je je aanmeldt met je 'Het Archief'-account?<br />
 	      Stel dan eerst je wachtwoord in.</p>
 	   <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
