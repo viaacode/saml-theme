@@ -90,11 +90,11 @@ if (!empty($query)) {
         <div class="c-alert c-alert--info">
 	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
 	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je aanmeldt met je 'Het Archief'-account?<br />
-	      Dan moet je eerst je wachtwoord nog instellen.</p>
+	      Stel dan eerst je wachtwoord in.</p>
 	   <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
                  <div class="c-button__content">
-		 <div class="c-button__label"><a href="%%SSUM_URL%%<?php echo urlencode($sid['url']); ?>">Naar wachtwoord instellen</a></div>
+		 <div class="c-button__label"><a href="%%SSUM_URL%%<?php echo urlencode($sid['url']); ?>">Een nieuw wachtwoord instellen</a></div>
                  </div>
                </button>
            </p>
