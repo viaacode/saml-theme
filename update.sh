@@ -10,8 +10,10 @@ function account_portal_url {
                     Url="https://account.hetarchief.be/users/password/new?redirect_to=";;
                 staging)
                     Url="https://account-qas.hetarchief.be/users/password/new?redirect_to=";;
-                *)
-                    Url="https://ldap-ssum-dev.apps.do.viaa.be/users/password/new?redirect_to=";;
+                integration)
+                    Url="https://ssum-int-iam.private.cloud.meemoo.be/users/password/new?redirect_to=";;
+                development)
+                    Url="https://ssum-tst-iam.private.cloud.meemoo.be/users/password/new?redirect_to=";;
             esac
             ;;
         *)

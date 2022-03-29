@@ -2,7 +2,7 @@
 $env = "integration";
 switch ($env) {
   case "integration":
-    $prefix= "-tst";
+    $prefix= "-int";
   break;
   case "development":
     $prefix= "-tst";
