@@ -2,7 +2,7 @@
 $env = "integration";
 switch ($env) {
   case "integration":
-      $prefix= "tst.";
+      $prefix= "int.";
       break;
   case "development":
       $prefix= "tst.";
@@ -94,7 +94,7 @@ if (!empty($query)) {
 	   <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
                  <div class="c-button__content">
-		 <div class="c-button__label"><a href="https://ldap-ssum-dev.apps.do.viaa.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Naar wachtwoord instellen</a></div>
+		 <div class="c-button__label"><a href="https://ssum-int-iam.private.cloud.meemoo.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Naar wachtwoord instellen</a></div>
                  </div>
                </button>
            </p>
@@ -138,7 +138,7 @@ if (!empty($query)) {
           <hr class="c-hr">
           <div class="c-content">
             <p class="u-text-muted">
-              <a href="https://ldap-ssum-dev.apps.do.viaa.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
+              <a href="https://ssum-int-iam.private.cloud.meemoo.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
             </p>
           </div>
         </div>
