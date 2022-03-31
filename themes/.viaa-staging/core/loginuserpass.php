@@ -39,7 +39,7 @@ if ($this->data['errorcode'] !== NULL) {
 							<div class="p1 px2">
 								<form name="loginform" id="loginform" action="?" method="post">
 									<div class="form-group">
-										<label for="inputUsername">Gebruikersnaam</label><input type="text" name="username" class="form-control" id="inputUsername" placeholder="Gebruikersnaam" autofocus>
+										<label for="inputUsername">E-mailadres</label><input type="text" name="username" class="form-control" id="inputUsername" placeholder="E-mailadres" autofocus>
 									</div>
 									<div class="form-group">
 										<label for="inputPassword">Wachtwoord</label><input type="password" name="password" class="form-control" id="inputPassword" placeholder="Wachtwoord">
@@ -51,12 +51,12 @@ if ($this->data['errorcode'] !== NULL) {
 									?>
 									<button type="submit" name="wp-submit" id="wp-submit" class="btn btn--meemoo flt--right my1" style="padding:0rem 1rem;">Login</button>
 									<p class="my2 small">
-										<span><a href="https://accounts-qas.viaa.be/pwm/public/ForgottenPassword">Wachtwoord vergeten?</a></span>
+										<span><a href="https://accounts-qas.viaa.be/pwm/public/ForgottenPassword">Inloggegevens vergeten?</a></span>
 									</p>
 								</form>
 							</div>
 							<div class="txt--center mb1">
-								<span class="small fnt--mid-gray">© 2020 / <a href="http://www.meemoo.be">www.meemoo.be</a></span>
+								<span class="small fnt--mid-gray">© 2022 / <a href="http://www.meemoo.be">www.meemoo.be</a></span>
 							</div>
 						</div>
 						<div class="grd-row-col-1-5"></div>
