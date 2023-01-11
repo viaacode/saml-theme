@@ -22,25 +22,7 @@ $sid = SimpleSAML\Utilities::parseStateID($state);
 if (!is_null($sid['url'])) {
   SimpleSAML\Utilities::checkURLAllowed($sid['url']);
   }
-
-/*
- * Deprecated by the above
- * Legacy for reference
-
-if (!empty($query)) {
-  parse_str(urldecode($query),$params);
-    if (!empty($params['RelayState'])) {
-    $relay_state = json_decode($params['RelayState']);
-    $redirect_to = $relay_state->returnToUrl;
-  } else {
-  $redirect_to = "https://".$prefix."hetarchief.be";
-  }
-}
-*/
-
 ?>
-
-
 <!DOCTYPE html>
 <html dir="ltr" lang="nl">
 <head>
@@ -51,7 +33,7 @@ if (!empty($query)) {
   <meta name="application-name" content="idp<?php echo " ".$env;?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-650a3d05-b21a-48e3-8376-38ee0e4000ab.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/loginuserpass.css') ?>">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/eye.css') ?>">
   <script src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/js/app.js') ?>"></script>
 </head>
