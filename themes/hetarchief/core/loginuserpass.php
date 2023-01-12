@@ -43,12 +43,17 @@ if (!is_null($sid['url'])) {
 <?php echo "console.log(".json_encode(get_defined_vars(), JSON_HEX_TAG).");"; ?>
 <?php echo "console.log(".json_encode($this->data, JSON_HEX_TAG).");"; ?>
 </script>
-  <div class="o-container-vertical">
+  <div class="o-container-vertical" style="margin-top:2em;">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
-        <h1 class="c-brand c-brand--large">
-          <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
-        </h1>
+        <div class="o-flex o-flex--align-baseline o-flex--justify-between">
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" height="90" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
+          </div>
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" height="40" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
+          </div>
+        </div>
       </div>
       <hr class="c-hr">
       <?php if ($this->data['errorcode'] !== NULL) { ?>
@@ -70,21 +75,22 @@ if (!is_null($sid['url'])) {
       <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && preg_match('/avo2/', $this->data['SPMetadata']['entityid']))  { ?>
       <div class="u-spacer-top-l">
         <div class="c-alert c-alert--info">
-	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
-	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je je aanmeldt met je 'Het Archief'-account?<br />
-	      Stel dan eerst je wachtwoord in.</p>
-	   <p class="o-flex__item u-spacer-s u-text-center">
+	        <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
+	          <p class="o-flex__item u-text-center">Is dit de eerste keer dat je je aanmeldt met je 'Het Archief'-account?<br />Stel dan eerst je wachtwoord in.</p>
+	          <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
-                 <div class="c-button__content">
-		 <div class="c-button__label"><a href="%%SSUM_URL%%<?php echo urlencode($sid['url']); ?>">Een nieuw wachtwoord instellen</a></div>
-                 </div>
-               </button>
-           </p>
+                <div class="c-button__content">
+		              <div class="c-button__label">
+                    <a href="%%SSUM_URL%%<?php echo urlencode($sid['url']); ?>">Een nieuw wachtwoord instellen</a>
+                  </div>
+                </div>
+              </button>
+            </p>
+          </div>
         </div>
-      </div>
       <hr class="c-hr">
       <?php } ?>
-      <h3 class="c-h2">Inloggen</h3>
+      <h1 class="c-h2">Inloggen</h3>
       <form name="loginform" id="loginform" action="?" method="post">
         <div class="u-spacer-bottom-l">
           <div class="o-form-group-layout o-form-group-layout--standard">
