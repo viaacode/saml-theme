@@ -33,7 +33,7 @@ if (!is_null($sid['url'])) {
   <meta name="application-name" content="idp<?php echo " ".$env;?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?8a9d42b0-de14-4dc1-b301-de8b251fe84c') ?>">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/eye.css') ?>">
   <script src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/js/app.js') ?>"></script>
 </head>
@@ -90,7 +90,7 @@ if (!is_null($sid['url'])) {
         </div>
       <hr class="c-hr">
       <?php } ?>
-      <h1 class="c-h2">Inloggen</h3>
+      <h1 class="c-h2">Inloggen</h1>
       <form name="loginform" id="loginform" action="?" method="post">
         <div class="u-spacer-bottom-l">
           <div class="o-form-group-layout o-form-group-layout--standard">

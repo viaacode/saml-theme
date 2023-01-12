@@ -64,7 +64,7 @@ $message .= "</p>";
   <title>
     Geen toegang - Het Archief
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?8a9d42b0-de14-4dc1-b301-de8b251fe84c') ?>">
   <meta name="robots" content="noindex">
 </head>
 
@@ -82,7 +82,7 @@ $message .= "</p>";
         </div>
       </div>
       <hr class="c-hr">
-      <h3 class="c-h2">Toegang geweigerd</h3>
+      <h1 class="c-h2">Toegang geweigerd</h1>
       <div class="c-alert">
         <div class="c-alert__body">
           <div class="u-spacer-right-s">
