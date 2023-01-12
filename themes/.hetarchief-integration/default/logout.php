@@ -7,17 +7,22 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-650a3d05-b21a-48e3-8376-38ee0e4000ab.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css') ?>">
   <meta name="robots" content="noindex">
 </head>
 
 <body>
-  <div class="o-container-vertical">
+<div class="o-container-vertical" style="margin-top:2em;">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
-        <h1 class="c-brand c-brand--large">
-          <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
-        </h1>
+        <div class="o-flex o-flex--align-baseline o-flex--justify-between">
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" height="90" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
+          </div>
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" height="40" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
+          </div>
+        </div>
       </div>
       <hr class="c-hr">
       <div class="c-content">

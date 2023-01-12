@@ -115,7 +115,7 @@ if (!is_null($sid['url'])) {
 	              echo('<input type="hidden" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" />');
               }
 						?>
-            <div class="o-form-group">
+            <div class="o-flex o-form-group o-flex--justify-between">
               <button type="submit" name="wp-submit" id="wp-submit" class="c-button c-button--primary">
                 <div class="c-button__content">
                   <div class="c-button__label">Inloggen</div>
