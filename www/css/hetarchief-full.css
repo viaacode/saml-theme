@@ -48,29 +48,29 @@
    ========================================================================== */
    @font-face {
        font-family: 'SofiaPro-Bold';
-       src: url('webfonts/3AFA78_0_0.eot');
-       src: url('webfonts/3AFA78_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/3AFA78_0_0.woff2') format('woff2'), url('webfonts/3AFA78_0_0.woff') format('woff'), url('webfonts/3AFA78_0_0.ttf') format('truetype');
+       src: url('../fonts/3AFA78_0_0.eot');
+       src: url('../fonts/3AFA78_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AFA78_0_0.woff2') format('woff2'), url('../fonts/3AFA78_0_0.woff') format('woff'), url('../fonts/3AFA78_0_0.ttf') format('truetype');
    }
 
 
    @font-face {
        font-family: 'SofiaPro-Bolditalic';
-       src: url('webfonts/3AFA78_1_0.eot');
-       src: url('webfonts/3AFA78_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/3AFA78_1_0.woff2') format('woff2'), url('webfonts/3AFA78_1_0.woff') format('woff'), url('webfonts/3AFA78_1_0.ttf') format('truetype');
+       src: url('../fonts/3AFA78_1_0.eot');
+       src: url('../fonts/3AFA78_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AFA78_1_0.woff2') format('woff2'), url('../fonts/3AFA78_1_0.woff') format('woff'), url('../fonts/3AFA78_1_0.ttf') format('truetype');
    }
 
 
    @font-face {
        font-family: 'SofiaPro-Regular';
-       src: url('webfonts/3AFA78_2_0.eot');
-       src: url('webfonts/3AFA78_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/3AFA78_2_0.woff2') format('woff2'), url('webfonts/3AFA78_2_0.woff') format('woff'), url('webfonts/3AFA78_2_0.ttf') format('truetype');
+       src: url('../fonts/3AFA78_2_0.eot');
+       src: url('../fonts/3AFA78_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AFA78_2_0.woff2') format('woff2'), url('../fonts/3AFA78_2_0.woff') format('woff'), url('../fonts/3AFA78_2_0.ttf') format('truetype');
    }
 
 
    @font-face {
        font-family: 'SofiaPro-Regularitalic';
-       src: url('webfonts/3AFA78_3_0.eot');
-       src: url('webfonts/3AFA78_3_0.eot?#iefix') format('embedded-opentype'), url('webfonts/3AFA78_3_0.woff2') format('woff2'), url('webfonts/3AFA78_3_0.woff') format('woff'), url('webfonts/3AFA78_3_0.ttf') format('truetype');
+       src: url('../fonts/3AFA78_3_0.eot');
+       src: url('../fonts/3AFA78_3_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AFA78_3_0.woff2') format('woff2'), url('../fonts/3AFA78_3_0.woff') format('woff'), url('../fonts/3AFA78_3_0.ttf') format('truetype');
    }
 
 /* Generic: CSS reset, box-sizing, global CSS tweaks
