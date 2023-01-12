@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?8a9d42b0-de14-4dc1-b301-de8b251fe84c') ?>">
   <meta name="robots" content="noindex">
 </head>
 
@@ -26,8 +26,9 @@
       </div>
       <hr class="c-hr">
       <div class="c-content">
-        <p class="u-text-muted">
-          Je bent uitgelogd.
+        <h1 class="c-h2">Je bent uitgelogd</h1>
+        <p>
+          Bedankt voor je bezoek en tot gauw!
         </p>
       </div>
     </div>
