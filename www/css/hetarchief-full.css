@@ -403,14 +403,14 @@ abbr[title] {
 .o-container-vertical-image {
   padding-top: 0; }
 
-img.logo--meemo {
+img.logo--meemoo {
     width: 175px; }
 
 img.logo--hetarchief {
     width: 200px; }
  
 @media (max-width: 800px) {
-  img.logo--meemo {
+  img.logo--meemoo {
     width: 140px;
   }
   img.logo--hetarchief {
