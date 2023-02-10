@@ -9,12 +9,10 @@
   </title>
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?8a9d42b0-de14-4dc1-b301-de8b251fe84c') ?>">
   <meta name="robots" content="noindex">
-  <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
 
 <body>
-<?php $this->includeAtTemplateBase('includes/google-tag-manager.body.php');?>
-  <div class="o-container-vertical">
+<div class="o-container-vertical" style="margin-top:2em;">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
         <div class="o-flex o-flex--align-baseline o-flex--justify-between">
