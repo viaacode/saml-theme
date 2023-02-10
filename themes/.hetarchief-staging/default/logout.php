@@ -33,6 +33,12 @@
           Bedankt voor je bezoek en tot gauw!
         </p>
       </div>
+      <hr class="c-hr">
+      <div class="o-flex o-flex--vertical">
+        <p class="o-flex__item u-text-center u-text-muted">
+          Met dit account krijg je toegang tot services van <a href="https://meemoo.be">meemoo</a> (&copy; 2023).
+        </p>
+      </div>
     </div>
   </div>
 </body>

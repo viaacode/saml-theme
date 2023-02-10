@@ -49,11 +49,11 @@ if (!is_null($sid['url'])) {
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
         <div class="o-flex o-flex--align-baseline o-flex--justify-between">
-          <div class="">
-            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" height="90" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
+          <div>
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" class="logo--meemoo" />
           </div>
-          <div class="">
-            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" height="40" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
+          <div>
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" class="logo--hetarchief" />
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ if (!is_null($sid['url'])) {
                 <button class="c-button c-button--link">
                   <div class="c-button__content">
                     <div class="c-button__label">
-                      <a href="https://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Logingegevens vergeten?</a>
+                      <a href="https://account-qas.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
                     </div>
                   </div>
                 </button>
@@ -137,10 +137,7 @@ if (!is_null($sid['url'])) {
           <hr class="c-hr">
           <div class="o-flex o-flex--vertical">
             <p class="o-flex__item u-text-center u-text-muted">
-              Met deze account krijg je toegang tot services van <a href="https://meemoo.be">meemoo</a>.
-            </p>
-            <p class="o-flex__item u-text-center u-text-muted">
-              <a href="#">Meer informatie over je account vind je op onze helpdesk.</a>
+              Met dit account kan je aanmelden bij diensten van <a href="https://meemoo.be">meemoo</a> (&copy; 2023).
             </p>
           </div>
         </div>

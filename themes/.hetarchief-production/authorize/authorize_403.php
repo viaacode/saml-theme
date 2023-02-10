@@ -84,7 +84,7 @@ $message .= "</p>";
         </div>
       </div>
       <hr class="c-hr">
-      <h1 class="c-h2">Toegang geweigerd</h1>
+      <h1 class="c-h2">Je hebt geen toegang tot deze toepassing</h1>
       <div class="c-alert">
         <div class="c-alert__body">
           <div class="u-spacer-right-s">
@@ -108,8 +108,15 @@ $message .= "</p>";
         </div>
         <div style="width: 200px;">
           <p class="u-text-right u-text-muted">
-            <a href="<?php echo $logoutURL; ?>">Afmelden</a></p>
+            <a href="<?php echo $logoutURL; ?>">Afmelden</a>
+          </p>
         </div>
+      </div>
+      <hr class="c-hr">
+      <div class="o-flex o-flex--vertical">
+        <p class="o-flex__item u-text-center u-text-muted">
+          Met dit account kan je aanmelden bij diensten van <a href="https://meemoo.be">meemoo</a> (&copy; 2023).
+        </p>
       </div>
     </div>
   </div>
