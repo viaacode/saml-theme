@@ -402,8 +402,14 @@ abbr[title] {
    ========================================================================== */
 .o-container-vertical-image {
   padding-top: 0; }
+
+img.logo--meemo {
+    width: 175px; }
+
+img.logo--hetarchief {
+    width: 200px; }
  
-@media (min-width: 700px) {
+@media (max-width: 800px) {
   img.logo--meemo {
     width: 140px;
   }
