@@ -127,7 +127,7 @@ if (!is_null($sid['url'])) {
                 <button class="c-button c-button--link">
                   <div class="c-button__content">
                     <div class="c-button__label">
-                      <a href="%%SSUM_URL%%<?php echo urlencode($sid['url']); ?>">Logingegevens vergeten?</a>
+                      <a href="%%SSUM_URL%%<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
                     </div>
                   </div>
                 </button>
@@ -137,10 +137,7 @@ if (!is_null($sid['url'])) {
           <hr class="c-hr">
           <div class="o-flex o-flex--vertical">
             <p class="o-flex__item u-text-center u-text-muted">
-              Met deze account krijg je toegang tot services van <a href="https://meemoo.be">meemoo</a>.
-            </p>
-            <p class="o-flex__item u-text-center u-text-muted">
-              <a href="#">Meer informatie over je account vind je op onze helpdesk.</a>
+              Met dit account kan je aanmelden bij diensten van <a href="https://meemoo.be">meemoo</a> (&copy; 2023).
             </p>
           </div>
         </div>
