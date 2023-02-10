@@ -64,7 +64,7 @@ $message .= "</p>";
   <title>
     Geen toegang - Het Archief
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-650a3d05-b21a-48e3-8376-38ee0e4000ab.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?8a9d42b0-de14-4dc1-b301-de8b251fe84c') ?>">
   <meta name="robots" content="noindex">
   <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
@@ -74,12 +74,17 @@ $message .= "</p>";
   <div class="o-container-vertical">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
-        <h1 class="c-brand c-brand--large">
-          <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
-        </h1>
+        <div class="o-flex o-flex--align-baseline o-flex--justify-between">
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" height="90" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
+          </div>
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" height="40" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
+          </div>
+        </div>
       </div>
       <hr class="c-hr">
-      <h3 class="c-h2">Toegang geweigerd</h3>
+      <h1 class="c-h2">Toegang geweigerd</h1>
       <div class="c-alert">
         <div class="c-alert__body">
           <div class="u-spacer-right-s">
