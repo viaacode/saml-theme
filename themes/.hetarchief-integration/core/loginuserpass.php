@@ -36,9 +36,11 @@ if (!is_null($sid['url'])) {
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?8a9d42b0-de14-4dc1-b301-de8b251fe84c') ?>">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/eye.css') ?>">
   <script src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/js/app.js') ?>"></script>
+  <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
 
 <body>
+<?php $this->includeAtTemplateBase('includes/google-tag-manager.body.php');?>
 <script>
 <?php echo "console.log(".json_encode(get_defined_vars(), JSON_HEX_TAG).");"; ?>
 <?php echo "console.log(".json_encode($this->data, JSON_HEX_TAG).");"; ?>
