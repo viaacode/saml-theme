@@ -345,7 +345,7 @@ abbr[title] {
   .o-container-bp2--medium {
     max-width: 72rem; }
   .o-container-bp2--large {
-    max-width: 94rem; } }
+    max-width: 94rem; }  }
 
 /* ==========================================================================
   Container vertical
@@ -402,6 +402,13 @@ abbr[title] {
    ========================================================================== */
 .o-container-vertical-image {
   padding-top: 0; }
+ 
+@media (min-width: 700px) {
+  img.logo--meemo {
+    width: 140px;
+  }
+  img.logo--hetarchief {
+    width: 160px; } }
 
 /* ==========================================================================
     Object: Flex
