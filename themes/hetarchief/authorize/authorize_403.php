@@ -64,7 +64,7 @@ $message .= "</p>";
   <title>
     Geen toegang - Het Archief
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?55709da8-69ee-4d77-a574-ebc56a5c5bf1') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?019f85ad-4278-4939-9703-010772883655') ?>">
   <meta name="robots" content="noindex">
   <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
