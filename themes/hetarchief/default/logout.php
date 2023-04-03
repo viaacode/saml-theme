@@ -7,22 +7,36 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-650a3d05-b21a-48e3-8376-38ee0e4000ab.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?019f85ad-4278-4939-9703-010772883655') ?>">
   <meta name="robots" content="noindex">
+  <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
 
 <body>
-  <div class="o-container-vertical">
+<?php $this->includeAtTemplateBase('includes/google-tag-manager.body.php');?>
+<div class="o-container-vertical" style="margin-top:2em;">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
-        <h1 class="c-brand c-brand--large">
-          <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
-        </h1>
+        <div class="o-flex o-flex--align-baseline o-flex--justify-between">
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" height="90" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
+          </div>
+          <div class="">
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" height="40" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
+          </div>
+        </div>
       </div>
       <hr class="c-hr">
       <div class="c-content">
-        <p class="u-text-muted">
-          Je bent uitgelogd.
+        <h1 class="c-h2">Je bent uitgelogd</h1>
+        <p>
+          Bedankt voor je bezoek en tot gauw!
+        </p>
+      </div>
+      <hr class="c-hr">
+      <div class="o-flex o-flex--vertical">
+        <p class="o-flex__item u-text-center u-text-muted">
+          Met dit account krijg je toegang tot services van <a href="https://meemoo.be">meemoo</a> (&copy; 2023).
         </p>
       </div>
     </div>

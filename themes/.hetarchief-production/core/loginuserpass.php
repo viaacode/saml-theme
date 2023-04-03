@@ -22,25 +22,7 @@ $sid = SimpleSAML\Utilities::parseStateID($state);
 if (!is_null($sid['url'])) {
   SimpleSAML\Utilities::checkURLAllowed($sid['url']);
   }
-
-/*
- * Deprecated by the above
- * Legacy for reference
-
-if (!empty($query)) {
-  parse_str(urldecode($query),$params);
-    if (!empty($params['RelayState'])) {
-    $relay_state = json_decode($params['RelayState']);
-    $redirect_to = $relay_state->returnToUrl;
-  } else {
-  $redirect_to = "https://".$prefix."hetarchief.be";
-  }
-}
-*/
-
 ?>
-
-
 <!DOCTYPE html>
 <html dir="ltr" lang="nl">
 <head>
@@ -51,22 +33,29 @@ if (!empty($query)) {
   <meta name="application-name" content="idp<?php echo " ".$env;?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-650a3d05-b21a-48e3-8376-38ee0e4000ab.css') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?55709da8-69ee-4d77-a574-ebc56a5c5bf1') ?>">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/eye.css') ?>">
   <script src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/js/app.js') ?>"></script>
+  <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
 
 <body>
+<?php $this->includeAtTemplateBase('includes/google-tag-manager.body.php');?>
 <script>
 <?php echo "console.log(".json_encode(get_defined_vars(), JSON_HEX_TAG).");"; ?>
 <?php echo "console.log(".json_encode($this->data, JSON_HEX_TAG).");"; ?>
 </script>
-  <div class="o-container-vertical">
+  <div class="o-container-vertical" style="margin-top:2em;">
     <div class="o-container o-container--small">
       <div class="u-spacer-bottom-l">
-        <h1 class="c-brand c-brand--large">
-          <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-algemeen.svg')?>" alt="Het Archief">
-        </h1>
+        <div class="o-flex o-flex--align-baseline o-flex--justify-between">
+          <div>
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" class="logo--meemoo" />
+          </div>
+          <div>
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" class="logo--hetarchief" />
+          </div>
+        </div>
       </div>
       <hr class="c-hr">
       <?php if ($this->data['errorcode'] !== NULL) { ?>
@@ -88,21 +77,22 @@ if (!empty($query)) {
       <?php if ($this->data['errorcode'] == "WRONGUSERPASS" && preg_match('/avo2/', $this->data['SPMetadata']['entityid']))  { ?>
       <div class="u-spacer-top-l">
         <div class="c-alert c-alert--info">
-	  <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
-	    <p class="o-flex__item u-text-center">Is dit de eerste keer dat je je aanmeldt met je 'Het Archief'-account?<br />
-	      Stel dan eerst je wachtwoord in.</p>
-	   <p class="o-flex__item u-spacer-s u-text-center">
+	        <div class="o-flex o-flex--vertical" style="margin: 0 auto;">
+	          <p class="o-flex__item u-text-center">Is dit de eerste keer dat je je aanmeldt met je 'Het Archief'-account?<br />Stel dan eerst je wachtwoord in.</p>
+	          <p class="o-flex__item u-spacer-s u-text-center">
               <button class="c-button c-button--link">
-                 <div class="c-button__content">
-		 <div class="c-button__label"><a href="https://account.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Een nieuw wachtwoord instellen</a></div>
-                 </div>
-               </button>
-           </p>
+                <div class="c-button__content">
+		              <div class="c-button__label">
+                    <a href="https://account.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Een nieuw wachtwoord instellen</a>
+                  </div>
+                </div>
+              </button>
+            </p>
+          </div>
         </div>
-      </div>
       <hr class="c-hr">
       <?php } ?>
-      <h3 class="c-h2">Inloggen</h3>
+      <h1 class="c-h2">Inloggen</h1>
       <form name="loginform" id="loginform" action="?" method="post">
         <div class="u-spacer-bottom-l">
           <div class="o-form-group-layout o-form-group-layout--standard">
@@ -127,18 +117,27 @@ if (!empty($query)) {
 	              echo('<input type="hidden" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" />');
               }
 						?>
-            <div class="o-form-group">
+            <div class="o-flex o-form-group o-flex--justify-between">
               <button type="submit" name="wp-submit" id="wp-submit" class="c-button c-button--primary">
                 <div class="c-button__content">
                   <div class="c-button__label">Inloggen</div>
                 </div>
               </button>
+              <div class="c-content">
+                <button class="c-button c-button--link">
+                  <div class="c-button__content">
+                    <div class="c-button__label">
+                      <a href="https://account.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <hr class="c-hr">
-          <div class="c-content">
-            <p class="u-text-muted">
-              <a href="https://account.hetarchief.be/users/password/new?redirect_to=<?php echo urlencode($sid['url']); ?>">Wachtwoord vergeten?</a>
+          <div class="o-flex o-flex--vertical">
+            <p class="o-flex__item u-text-center u-text-muted">
+              Met dit account kan je aanmelden bij diensten van <a href="https://meemoo.be">meemoo</a> (&copy; 2023).
             </p>
           </div>
         </div>
