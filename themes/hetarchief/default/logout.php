@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <title>Inloggen - VIAA
   </title>
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?019f85ad-4278-4939-9703-010772883655') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?73d06637-c0fd-4810-a5b0-1b83847ee305') ?>">
   <meta name="robots" content="noindex">
   <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
 </head>
@@ -19,10 +19,10 @@
       <div class="u-spacer-bottom-l">
         <div class="o-flex o-flex--align-baseline o-flex--justify-between">
           <div class="">
-            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" height="90" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-meemoo.svg')?>" alt="Logo meemoo - Vlaams Instituut voor het Archief" title="Logo meemoo" />
           </div>
           <div class="">
-            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" height="40" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
+            <img src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/img/logo-hetarchief.svg')?>" alt="Logo Het Archief - Een initiatief van meemoo" title="Logo Het Archief" />
           </div>
         </div>
       </div>

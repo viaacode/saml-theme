@@ -75,7 +75,7 @@
 
 /* Generic: CSS reset, box-sizing, global CSS tweaks
    ========================================================================== */
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -404,11 +404,11 @@ abbr[title] {
   padding-top: 0; }
 
 img.logo--meemoo {
-    width: 175px; }
+    height: 90px; }
 
 img.logo--hetarchief {
-    width: 200px; }
- 
+    height: 90px; }
+
 @media (max-width: 800px) {
   img.logo--meemoo {
     width: 140px;
@@ -4268,8 +4268,8 @@ th.c-table__header--sortable {
 /* ==========================================================================
    Theme mixin : Put all skin css related code here
 
-   Take in inputs colors variables and output a theme skin, 
-   the default theme is dark if the mixin is used without any variables. 
+   Take in inputs colors variables and output a theme skin,
+   the default theme is dark if the mixin is used without any variables.
 
    Please group CSS by files to have an easy way to know what belong to where
 

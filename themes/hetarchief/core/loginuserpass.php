@@ -33,7 +33,7 @@ if (!is_null($sid['url'])) {
   <meta name="application-name" content="idp<?php echo " ".$env;?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?019f85ad-4278-4939-9703-010772883655') ?>">
+  <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/hetarchief-full.css?73d06637-c0fd-4810-a5b0-1b83847ee305') ?>">
   <link rel="stylesheet" href="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/css/eye.css') ?>">
   <script src="<?php echo SimpleSAML\Module::getModuleURL('themeviaa/js/app.js') ?>"></script>
   <?php $this->includeAtTemplateBase('includes/google-tag-manager.head.php');?>
