@@ -16,3 +16,12 @@ https://do-tst-idp-20.do.viaa.be/module.php/core/loginuserpass?AuthState=_da6d81
 Alternatief kan je ook een cookie language=nl of language=en zetten en dan werkt de eerste link ook met juiste taal (nog te onderzoeken in hoeverre dat van clientside kan). Spijtig genoeg gaat language= meegeven niet direct op de eerste login link.
 
 
+
+ER is een docs dir waar je kan lezen over themes.
+
+/usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/docs/simplesamlphp-theming.md
+
+-> de templates die we nu hebben staan moeten best in zo'n themes dir komen en dan kunnen we ze fully overriden zonder de default templates uit core te moeten aanpassen.
+
+
+
