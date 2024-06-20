@@ -4,3 +4,10 @@ https://do-tst-idp-20.do.viaa.be/saml2/idp/SSOService.php?spentityid=http%3A//lo
 Hier moeten we de twig views restylen.
 
 
+Rechtstreekse nederlandse link:
+https://do-tst-idp-20.do.viaa.be/module.php/core/loginuserpass?AuthState=_20e27890b5186be816e555c7829669a4ad78cd22a4%3Ahttps%3A%2F%2Fdo-tst-idp-20.do.viaa.be%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Flocal_monitor%252Fsp%26cookieTime%3D1718882968%26language%3Dnl&language=nl
+
+
+Rechtstreekse engelse link:
+https://do-tst-idp-20.do.viaa.be/module.php/core/loginuserpass?AuthState=_20e27890b5186be816e555c7829669a4ad78cd22a4%3Ahttps%3A%2F%2Fdo-tst-idp-20.do.viaa.be%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Flocal_monitor%252Fsp%26cookieTime%3D1718882968%26language%3Dnl&language=en
+
