@@ -1,0 +1,6 @@
+
+https://do-tst-idp-20.do.viaa.be/saml2/idp/SSOService.php?spentityid=http%3A//local_monitor/sp
+
+Hier moeten we de twig views restylen.
+
+
