@@ -48,3 +48,12 @@ Configure the new meemoo theme by following changes in /usr/local/idp-tst.hetarc
 cp -r saml-theme/saml_v2/modules/meemoo /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/
 ```
 
+
+To override core templates like the login page located at simplesamlphp-2.2.2/modules/core/templates we can put a modified/custom version in
+the theme's core directory. For example we have this already that adds a password forget link (and most likely more changes soon).
+
+```
+saml_v2/modules/meemoo/themes/meemootheme/core/loginuserpass.twig
+```
+As this is also included in the saml_v2/modules/meemoo directory all will be overridden properly with the copy command in step 4.
+

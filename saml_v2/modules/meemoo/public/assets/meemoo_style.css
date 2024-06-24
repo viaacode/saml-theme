@@ -1,0 +1,10 @@
+#header {
+    height: 6rem;
+    background: linear-gradient(141deg, #009690 0%, #009690 51%, #009690 75%)
+}
+
+#footer {
+  width: 100%;
+  background: linear-gradient(141deg, #009690 0%, #077773 51%, #009690 75%)
+}
+
