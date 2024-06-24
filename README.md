@@ -43,9 +43,8 @@ Configure the new meemoo theme by following changes in /usr/local/idp-tst.hetarc
 ```
 
 
-Now copy the meemoo module with themed files and stylesheets:
+4. Now copy the meemoo module with themed files and stylesheets to the modules inside the simplesampl deployed application:
 ```
 cp -r saml-theme/saml_v2/modules/meemoo /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/
 ```
-
 
