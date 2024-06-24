@@ -1,7 +1,7 @@
 # saml-theme
 Custom look and feel for the viaa simplesamlphp idp
 
-# SAML v2 Meemoo theme
+## SimpleSamlPhp v2 : Custom meemoo theme
 
 Configure the new meemoo theme by following changes in /usr/local/idp-tst.hetarchief.be/simplesamlphp/config/config.php:
 
