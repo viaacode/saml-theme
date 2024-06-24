@@ -1,10 +1,45 @@
 #header {
-    height: 6rem;
-    background: linear-gradient(141deg, #009690 0%, #009690 51%, #009690 75%)
+  height: 7.5rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #dedede;
+  background: none;
+}
+
+.language-bar {
+  height: 19rem;
+}
+
+.archief-logo {
+  position: absolute;
+  right: 10px;
+  top: 22px;
+}
+
+.archief-logo img {
+  width: 140px;
 }
 
 #footer {
   width: 100%;
-  background: linear-gradient(141deg, #009690 0%, #077773 51%, #009690 75%)
+  background: none;
+  color: #000;
+  border-top: 1px solid #dedede;
 }
 
+
+#footer a, #footer a:visited {
+  color: #25A4CF;
+}
+
+a, a:visited {
+  color: #25A4CF;
+  font-size: 15px;
+}
+
+#footer a:hover, #footer a:visited:hover {
+  color: #25A4CF;
+  background-color: transparent;
+  text-decoration: underline;
+  padding-left: 3px;
+  padding-right: 0px;
+}
