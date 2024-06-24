@@ -3,6 +3,10 @@
   padding-top: 1rem;
   border-bottom: 1px solid #dedede;
   background: none;
+
+  /*   if we want back a gradient background like original
+   *   background: linear-gradient(141deg, #009690 0%, #009690 51%, #009690 75%)
+   */
 }
 
 .language-bar {
