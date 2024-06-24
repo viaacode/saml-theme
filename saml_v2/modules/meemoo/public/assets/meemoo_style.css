@@ -3,9 +3,8 @@
   padding-top: 1rem;
   border-bottom: 1px solid #dedede;
   background: none;
-
-  /*   if we want back a gradient background like original
-   *   background: linear-gradient(141deg, #009690 0%, #009690 51%, #009690 75%)
+  /* if we want back a gradient background like original
+   *  background: linear-gradient(141deg, #009690 0%, #009690 51%, #009690 75%)
    */
 }
 
@@ -41,9 +40,49 @@ a, a:visited {
 }
 
 #footer a:hover, #footer a:visited:hover {
-  color: #25A4CF;
+  color: #19718e;
   background-color: transparent;
   text-decoration: underline;
   padding-left: 3px;
   padding-right: 0px;
+}
+
+/* override default red buttons and other basic elements to match wanted styling */
+.pure-button-red {
+  border: 1px solid #25A4CF;
+  background: #25A4CF;
+  color: #FFF;
+}
+
+.pure-button-red:hover {
+  background: #19718e;
+  border-color: #19718e;
+}
+
+.pure-button {
+  transition: 0.18s background ease-in;
+  border-radius: 0.2rem;
+}
+
+.pure-form input.edge {
+  border-radius: 0.2rem;
+}
+
+a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
+.pure-menu-selected a.pure-menu-link:hover, .pure-menu-selected a.pure-menu-link:focus {
+  background-color: transparent;
+  color: #19718e;
+  padding-left: 0px;
+  padding-right: 2px;
+}
+
+
+/* =====  core/loginuserpass.twig ==== */
+.password-forgot-link {
+  margin-top: -2rem;
+  text-align: center;
+}
+
+.pure-form-aligned .pure-control-group label {
+  text-align: left;
 }

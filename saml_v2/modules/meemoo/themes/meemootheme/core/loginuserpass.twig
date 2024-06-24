@@ -33,10 +33,10 @@
     </div>
     {%- endif %}
 
-    <h1>{{ 'Enter your username and password'|trans }}</h1>
 
-    <p>{{ 'A service has requested you to authenticate yourself. Please enter your username and password in the form below.'|trans }}</p>
-    <div class="center-form login-form-start">
+    <div class="center-form">
+      <div class="login-form-start">
+        <h1>{{ 'Log in'|trans }}</h1>
         <form id="f" class="pure-form pure-form-aligned" action="{{ formURL }}" method="post" name="f" spellcheck="false">
                 <div class="pure-control-group">
                     <label for="username">{{ 'Username'|trans }}</label>
@@ -108,6 +108,7 @@
                 </button>
             </div>
         </form>
+      </div>
     </div>
     {% if loginpage_links is defined -%}
     <ul>
@@ -119,11 +120,9 @@
 
     <br><br>
     <div class="pure-form-message">
-        <strong>{{ 'Help! I don\'t remember my password.'|trans }}</strong>
 	<div class="password-forgot-link">
-	<a href="https://account-qas.hetarchief.be/nl/users/password/new?redirect_to=todo">Wachtwoord vergeten? (work in progress)</a>
+	<a href="https://account-qas.hetarchief.be/nl/users/password/new?redirect_to=todo">Wachtwoord vergeten?</a>
 	</div>
-        <p>{{ 'Without your username and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!'|trans }}</p>
     </div>
 
 {% endblock %}
