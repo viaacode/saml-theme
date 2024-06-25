@@ -10,6 +10,7 @@
 
 .language-bar {
   height: 19rem;
+  padding-left: 20px;
 }
 
 .archief-logo {
@@ -85,4 +86,20 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
 
 .pure-form-aligned .pure-control-group label {
   text-align: left;
+}
+
+
+/* admin pages */
+.pure-menu-item a:hover {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+a.pure-menu-link:focus, .pure-menu-selected a.pure-menu-link:hover, .pure-menu-selected a.pure-menu-link:focus {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pure-menu-selected {
+  background-color: #c9eae9;
 }
