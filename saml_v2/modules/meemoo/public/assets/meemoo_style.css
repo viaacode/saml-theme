@@ -1,6 +1,36 @@
+html {
+  font-size: 54.16%;
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 58.33%; 
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-family: "SofiaPro-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #2B414F;
+  background: #FFF;
+}
+
+#layout {
+  max-width: 70rem;
+  margin: 0 auto;
+  width: calc(100% -2.4rem);
+  margin-bottom: -7rem;
+}
+
 #header {
-  height: 7.5rem;
-  padding-top: 1rem;
+  height: 12.5rem;
+  padding-top: 6rem;
   border-bottom: 1px solid #dedede;
   background: none;
   /* if we want back a gradient background like original
@@ -8,28 +38,75 @@
    */
 }
 
-.language-bar {
-  height: 19rem;
-  padding-left: 20px;
-}
-
-.archief-logo {
-  position: absolute;
-  right: 10px;
-  top: 22px;
-}
-
-.archief-logo img {
-  width: 140px;
-}
-
 #footer {
-  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  width: calc(100% -2.4rem);
   background: none;
   color: #000;
   border-top: 1px solid #dedede;
 }
 
+
+
+#languageform {
+  position: absolute;
+  top: 14rem;
+  right: -6.7rem;
+}
+
+.logospace {
+  float: left;
+  margin-left: -6.5rem;
+}
+
+.archief-logo {
+  position: absolute;
+  right: -6.5rem;
+  top: 22px;
+}
+
+.language-menu {
+  width: 140px !important;
+}
+
+
+.archief-logo img {
+  width: 140px;
+}
+
+
+.copyrights {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .archief-logo {
+    top: 10px;
+  }
+  .logospace {
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .archief-logo {
+    right: -2rem;	
+    top: 5px;
+  }
+  .logospace {
+    margin-left: -2rem;
+    margin-top: -2.2rem;
+  }
+
+  #languageform {
+    right: -1.7rem;
+  }
+}
+
+.always-show {
+  display: block !important;
+}
 
 #footer a, #footer a:visited {
   color: #25A4CF;
