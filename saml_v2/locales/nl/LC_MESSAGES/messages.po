@@ -428,6 +428,9 @@ msgstr "Parse"
 msgid "Password"
 msgstr "Wachtwoord"
 
+msgid "Forgot your password"
+msgstr "Wachtwoord vergeten"
+
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:92
 msgid "Password not set"
 msgstr "Wachtwoord niet ingevuld"

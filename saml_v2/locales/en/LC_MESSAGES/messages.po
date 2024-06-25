@@ -713,7 +713,10 @@ msgid "User's password hash"
 msgstr "User's password hash"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Email address"
+
+msgid "Forgot your password"
+msgstr "Forgot your password"
 
 msgid "WS-Fed SP Demo Example"
 msgstr "WS-Fed SP Demo Example"
