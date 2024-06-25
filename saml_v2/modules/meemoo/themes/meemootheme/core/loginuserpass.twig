@@ -35,13 +35,13 @@
     {%- endif %}
 
 
-    <div class="center-form">
+    <div class="center-form login-form">
       <div class="login-form-start">
         <h1>{{ 'Log in'|trans }}</h1>
         <form id="f" class="pure-form pure-form-aligned" action="{{ formURL }}" method="post" name="f" spellcheck="false">
                 <div class="pure-control-group">
                     <label for="username">{{ 'Username'|trans }}</label>
-                    <input id="username" {{ forceUsername ? 'disabled' }} placeholder="{{ username }}" type="text" name="username" class="edge"
+                    <input id="username" {{ forceUsername ? 'disabled' }} placeholder="{{ username }}" type="text" name="username" class="edge login-input"
             {%- if not forceUsername %} tabindex="1" value="{{ username }}" autocomplete="username" {% endif %}
             {%- if not forceUsername and not username %} autofocus {% endif %} >
                 {% if rememberUsernameEnabled and not forceUsername -%}
@@ -57,7 +57,7 @@
 
                 <div class="pure-control-group">
                     <label for="password">{{ 'Password'|trans}}</label>
-                    <input id="password" type="password" tabindex="2" name="password" class="edge" autocomplete="current-password"
+                    <input id="password" type="password" tabindex="2" name="password" class="edgei login-input" autocomplete="current-password"
                     {%- if forceUsername or username %} autofocus {% endif %} >
                 </div>
 
@@ -101,8 +101,8 @@
                 </div> <!--pure-control-group-->
             {%- endif %}
 
-            <div class="pure-control-group center login-form-submit">
-                <button class="pure-button pure-button-red pure-input-1-2 pure-input-sm-1-1 right" id="submit_button"
+            <div class="pure-control-group login-form-submit">
+                <button class="pure-button pure-button-red login-button" id="submit_button"
                         type="submit" tabindex="6" data-default="{% trans %}Login{% endtrans %}"
                         data-processing="{% trans %}Processing...{% endtrans %}">
                 {% trans %}Login{% endtrans %}
@@ -121,7 +121,7 @@
 
     <br><br>
     
-    <div class="pure-form-message">
+    <div class="pure-form-message password-forget-wrap">
 	<div class="password-forgot-link">
 	<!-- TODO %%SSUM_URL%% -->
 	<a href="https://account-qas.hetarchief.be/nl/users/password/new?redirect_to=todo">Wachtwoord vergeten?</a>
