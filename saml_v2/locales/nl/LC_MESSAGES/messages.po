@@ -3,7 +3,7 @@ msgstr ""
 "X-Domain: messages\n"
 
 msgid "A service has requested you to authenticate yourself. Please enter your username and password in the form below."
-msgstr "Voor deze dienst is authenticatie vereist. Geef je gebruikersnaam en wachtwoord in onderstaand formulier."
+msgstr "Voor deze dienst is authenticatie vereist. Geef je e-mailadres en wachtwoord in onderstaand formulier."
 
 msgid "ADFS IdP Metadata"
 msgstr "ADFS IdP Metadata"
@@ -148,7 +148,7 @@ msgstr "E-mailadres:"
 
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:260
 msgid "Either no user with the given username could be found, or the password you gave was wrong. Please check the username and try again."
-msgstr "De opgegeven gebruikersnaam bestaat niet, of het wachtwoord is ongeldig. Verifieer de gebruikersnaam en probeer het nogmaals."
+msgstr "Het opgegeven e-mailadres bestaat niet, of het wachtwoord is ongeldig. Verifieer het e-mailadres en probeer het nogmaals."
 
 msgid "Enter your username and password"
 msgstr "Geef je gebruikersnaam en wachtwoord"
@@ -255,10 +255,10 @@ msgstr "In SimpleSAMLphp flat file formaat - gebruik dit wanneer uw federatiepar
 
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:102
 msgid "Incorrect username or password"
-msgstr "Incorrecte gebruikersnaam of wachtwoord"
+msgstr "Incorrecte e-mailadres of wachtwoord"
 
 msgid "Incorrect username or password."
-msgstr "Gebruikersnaam of wachtwoord niet bekend."
+msgstr "E-mailadres of wachtwoord niet bekend."
 
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:79
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:93
@@ -478,7 +478,7 @@ msgid "Remember my choice"
 msgstr "Onthoud mijn keuze"
 
 msgid "Remember my username"
-msgstr "Onthoud gebruikersnaam"
+msgstr "Onthoud e-mailadres"
 
 msgid "Report errors"
 msgstr "Rapporteer fouten"
@@ -706,7 +706,7 @@ msgid "When this identity provider tried to create an authentication response, a
 msgstr "Tijdens het aanmaken van een authenticatie response door deze Identity Provider is er een fout opgetreden."
 
 msgid "Without your username and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!"
-msgstr "Zonder je gebruikersnaam en wachtwoord kun je je niet authenticeren en dus niet gebruikmaken van deze dienst."
+msgstr "Zonder je e-mailadres en wachtwoord kun je je niet authenticeren en dus niet gebruikmaken van deze dienst."
 
 msgid "XML metadata"
 msgstr "XML metadata"

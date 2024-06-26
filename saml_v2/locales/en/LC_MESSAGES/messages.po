@@ -3,7 +3,7 @@ msgstr ""
 "X-Domain: messages\n"
 
 msgid "A service has requested you to authenticate yourself. Please enter your username and password in the form below."
-msgstr "A service has requested you to authenticate yourself. Please enter your username and password in the form below."
+msgstr "A service has requested you to authenticate yourself. Please enter your email address and password in the form below."
 
 msgid "ADFS IdP Metadata"
 msgstr "ADFS IdP Metadata"
@@ -157,10 +157,10 @@ msgstr "E-mail address:"
 
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:260
 msgid "Either no user with the given username could be found, or the password you gave was wrong. Please check the username and try again."
-msgstr "Either no user with the given username could be found, or the password you gave was wrong. Please check the username and try again."
+msgstr "Either no user with the given email address could be found, or the password you gave was wrong. Please check the email address and try again."
 
 msgid "Enter your username and password"
-msgstr "Enter your username and password"
+msgstr "Enter your email address and password"
 
 msgid "Entitlement regarding the service"
 msgstr "Entitlement regarding the service"
@@ -270,10 +270,10 @@ msgstr "In SimpleSAMLphp flat file format - use this if you are using a SimpleSA
 
 #: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:102
 msgid "Incorrect username or password"
-msgstr "Incorrect username or password"
+msgstr "Incorrect email address or password"
 
 msgid "Incorrect username or password."
-msgstr "Incorrect username or password."
+msgstr "Incorrect email address or password."
 
 msgid "Information about your current session"
 msgstr ""
@@ -502,7 +502,7 @@ msgid "Remember my choice"
 msgstr "Remember my choice"
 
 msgid "Remember my username"
-msgstr "Remember my username"
+msgstr "Remember my email address"
 
 msgid "Report errors"
 msgstr "Report errors"
@@ -739,7 +739,7 @@ msgid "When this identity provider tried to create an authentication response, a
 msgstr "When this identity provider tried to create an authentication response, an error occurred."
 
 msgid "Without your username and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!"
-msgstr "Without your username and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!"
+msgstr "Without your email address and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!"
 
 msgid "World"
 msgstr "World"
