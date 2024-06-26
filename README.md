@@ -62,3 +62,11 @@ cp -r saml-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlph
 cp saml-theme/saml_v2/Login.php  /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/core/src/Controller/
 ```
 
+7. Patch so that zendesk and google analytics javascript insertion works again.
+Default behaviour is to reject any loading of javascript files from external sources. We need to patch the file
+simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php
+```
+cp saml-theme/saml_v2/Configuration.php /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php
+```
+
+
