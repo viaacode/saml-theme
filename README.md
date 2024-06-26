@@ -53,5 +53,12 @@ Since this is also part of the saml_v2/modules/meemoo directory it already gets 
 5. Copy the locales folder to get correct english and dutch translation strings
 Inside the saml_v2/locales dir there are two folders nl and en that should be used to override and extend the default simple saml translation strings.
 ```
-cp -r samle-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/locales
+cp -r saml-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/locales
 ```
+
+
+6. Copy the customized controller that adds returnTo variable (we might refactor this later to use a module controller instead).
+```
+cp saml-theme/saml_v2/Login.php  /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/core/src/Controller/
+```
+
