@@ -183,6 +183,19 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
   .login-form {
     margin-left: 0rem;
     margin-right: 0rem;
+  }  
+}
+
+@media (min-width: 640px) {
+  .message-box {
+    margin-left: -7rem;
+    margin-right: 9rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .message-box {
+    margin-top: 4rem;
   }
 }
 
