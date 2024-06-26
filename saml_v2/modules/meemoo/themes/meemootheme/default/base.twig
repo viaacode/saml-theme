@@ -4,16 +4,19 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
     <title>Meemoo: {{ pagetitle }}</title>
     <link rel="preload" href="{{ asset('fonts/fa-solid-900.woff2') }}" as="font" crossorigin>
     <link rel="stylesheet" href="{{ asset("css/stylesheet.css") }}">
     <link rel="icon" href="{{ asset("icons/favicon.ico") }}">
     <meta name="robots" content="noindex, nofollow">
     {{ include('_head.twig', ignore_missing = true) }}
+    {{ include('google_tags_head.twig', ignore_missing = true) }}
+
     {% block preload %}{% endblock %}
   </head>
   <body id="{{ templateId }}">
+    {{ include('google_tags_body.twig', ignore_missing = true) }}
     <div id="layout">
     {% block header %}{% include "_header.twig" %}{% endblock %}
       <main>
