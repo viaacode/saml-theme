@@ -296,8 +296,8 @@ class Login
             $t->headers->setCookie($cookie);
         }
 
-	# added for having a redirectTo on the password forget link
-	$t->data['redirectTo'] = $this->getReturnPath($request);
+        # added for having a redirectTo on the password forget link
+        $t->data['redirectTo'] = $this->getReturnPath($request);
 
         return $t;
     }

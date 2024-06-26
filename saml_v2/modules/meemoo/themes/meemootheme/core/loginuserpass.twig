@@ -123,10 +123,10 @@
     
     <div class="pure-form-message password-forget-wrap">
       <div class="password-forgot-link">
-        RETURN URL = {{ redirectTo }}
-        {# TODO: get SSUM from ENV var and redirect_to from backend here #}
+        {# TODO get SSUM from an env var here #}
         {% set SSUM = "https://account-qas.hetarchief.be" %}
-        <a href="{{SSUM}}/{{currentLanguage}}/users/password/new?redirect_to=TODO">
+        <!-- REDIRECT_TO == {{ redirectTo }} (added into Login.php controller)-->
+        <a href="{{SSUM}}/{{currentLanguage}}/users/password/new?redirect_to={{redirectTo}}">
           {{ 'Forgot your password'|trans }}?
         </a>
       </div>
