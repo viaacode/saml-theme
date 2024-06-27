@@ -44,9 +44,18 @@ Inside the saml_v2/locales dir there are two folders nl and en that should be us
 cp -r saml-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/locales
 ```
 
-6. Copy the customized controller that adds returnTo variable (we might refactor this later to use a module controller instead).
+6. Copy the customized controller that adds returnTo variable and SSUM_URL env var for customization.
+(we might refactor this later to use a module controller instead).
 ```
 cp saml-theme/saml_v2/Login.php  /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/core/src/Controller/
+```
+
+Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
+if this is not set the fallback is "https://account-qas.hetarchief.be". This will be used as the base url for the ssum server.
+
+This can be done in the docker environment or you can directly use an apache config directive:
+```
+SetEnv SSUM_URL "https://account.hetarchief.be"
 ```
 
 7. Patch so that zendesk and google analytics javascript insertion works again.
@@ -56,7 +65,3 @@ simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php and remove the restricting 
 ```
 cp saml-theme/saml_v2/Configuration.php /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php
 ```
-
-8. Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
-if this is not set the fallback is "https://account-qas.hetarchief.be". This will be used as the base url for the ssum server.
-
