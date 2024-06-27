@@ -791,3 +791,6 @@ msgstr "niet aanwezig"
 
 msgid "or select a file:"
 msgstr "of kies een file:"
+
+msgid "footer_text"
+msgstr "Met deze account kan je aanmelden bij de diensten van"
