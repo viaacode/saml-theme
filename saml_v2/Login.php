@@ -296,7 +296,14 @@ class Login
             $t->headers->setCookie($cookie);
         }
 
+        # use SSUM_ENV var
+        $ssum_url = getenv('SSUM_URL');
+        if ($ssum_url == false) {
+          $ssum_url = "https://account-qas.hetarchief.be";
+        }
+
         # added for having a redirectTo on the password forget link
+        $t->data['ssumUrl'] = $ssum_url;
         $t->data['redirectTo'] = $this->getReturnPath($request);
 
         return $t;

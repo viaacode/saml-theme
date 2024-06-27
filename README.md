@@ -33,22 +33,10 @@ Configure the new meemoo theme by making following changes to /usr/local/idp-tst
   'theme.use' => 'meemoo:meemootheme',
 ```
 
-
 4. Now copy the meemoo module with themed files and stylesheets to the modules inside the simplesampl deployed application:
 ```
 cp -r saml-theme/saml_v2/modules/meemoo /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/
 ```
-
-
-### Future more advanced core overrides
-To override core templates like the login page located at simplesamlphp-2.2.2/modules/core/templates we can put a modified/custom version in
-the theme's core directory. For example we have done this already to add a password forget link into the loginuserpass.twig template (and most likely more changes soon).
-
-```
-saml_v2/modules/meemoo/themes/meemootheme/core/loginuserpass.twig
-```
-Since this is also part of the saml_v2/modules/meemoo directory it already gets activated with the copy command in step 4.
-
 
 5. Copy the locales folder to get correct english and dutch translation strings
 Inside the saml_v2/locales dir there are two folders nl and en that should be used to override and extend the default simple saml translation strings.
@@ -56,17 +44,19 @@ Inside the saml_v2/locales dir there are two folders nl and en that should be us
 cp -r saml-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/locales
 ```
 
-
 6. Copy the customized controller that adds returnTo variable (we might refactor this later to use a module controller instead).
 ```
 cp saml-theme/saml_v2/Login.php  /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/core/src/Controller/
 ```
 
 7. Patch so that zendesk and google analytics javascript insertion works again.
-Default behaviour is to reject any loading of javascript files from external sources. We need to patch the file
-simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php
+Default behaviour is to reject any loading of external javascript files. We need to patch the file
+simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php and remove the restricting CSP headers so that zendesk and google tag manager work again.
+(In a future version we might consider adding a nonce and doing other steps in order to increase security).
 ```
 cp saml-theme/saml_v2/Configuration.php /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php
 ```
 
+8. Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
+if this is not set the fallback is "https://account-qas.hetarchief.be". This will be used as the base url for the ssum server.
 
