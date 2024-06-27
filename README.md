@@ -33,18 +33,27 @@ Configure the new meemoo theme by making following changes to /usr/local/idp-tst
   'theme.use' => 'meemoo:meemootheme',
 ```
 
-4. Now copy the meemoo module with themed files and stylesheets to the modules inside the simplesampl deployed application:
+4. Add headers.security with less strict csp headers so that google tag manager and zendesk javascript can be loaded (external source):
+```
+    'headers.security' => array(
+        'X-Frame-Options' => 'SAMEORIGIN',
+        'X-Content-Type-Options' => 'nosniff',
+        'Referrer-Policy' => 'origin-when-cross-origin',
+    ),
+```
+
+5. Now copy the meemoo module with themed files and stylesheets to the modules inside the simplesampl deployed application:
 ```
 cp -r saml-theme/saml_v2/modules/meemoo /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/
 ```
 
-5. Copy the locales folder to get correct english and dutch translation strings
+6. Copy the locales folder to get correct english and dutch translation strings
 Inside the saml_v2/locales dir there are two folders nl and en that should be used to override and extend the default simple saml translation strings.
 ```
 cp -r saml-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/locales
 ```
 
-6. Copy the customized controller that adds returnTo variable and SSUM_URL env var for customization.
+7. Copy the customized controller that adds returnTo variable and SSUM_URL env var for customization.
 (we might refactor this later to use a module controller instead).
 ```
 cp saml-theme/saml_v2/Login.php  /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/core/src/Controller/
@@ -58,10 +67,3 @@ This can be done in the docker environment or you can directly use an apache con
 SetEnv SSUM_URL "https://account.hetarchief.be"
 ```
 
-7. Patch so that zendesk and google analytics javascript insertion works again.
-Default behaviour is to reject any loading of external javascript files. We need to patch the file
-simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php and remove the restricting CSP headers so that zendesk and google tag manager work again.
-(In a future version we might consider adding a nonce and doing other steps in order to increase security).
-```
-cp saml-theme/saml_v2/Configuration.php /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/src/SimpleSAML/Configuration.php
-```
