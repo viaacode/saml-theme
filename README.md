@@ -36,6 +36,18 @@ Configure the new meemoo theme by making following changes to /usr/local/idp-tst
 4. Add headers.security with less strict csp headers so that google tag manager and zendesk javascript can be loaded (external source):
 ```
     'headers.security' => array(
+	    'Content-Security-Policy' =>
+            "default-src 'self'; " .
+            "script-src 'self'; " .
+            "script-src-elem 'self' 'unsafe-inline' https://static.zdassets.com https://www.googletagmanager.com; " .
+            "style-src 'self' 'unsafe-inline'; " .
+            "object-src 'none'; " .
+            "base-uri 'self'; " .
+            "connect-src 'self' https://ekr.zdassets.com https://meemoo.zendesk.com https://*.google-analytics.com; " .
+            "font-src 'self'; " .
+            "media-src 'self' data:;" .
+            "img-src 'self' data:; " .
+            "manifest-src 'self'; ", 
         'X-Frame-Options' => 'SAMEORIGIN',
         'X-Content-Type-Options' => 'nosniff',
         'Referrer-Policy' => 'origin-when-cross-origin',
