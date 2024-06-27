@@ -12,7 +12,7 @@
     <meta name="robots" content="noindex, nofollow">
     {{ include('_head.twig', ignore_missing = true) }}
     {{ include('google_tags_head.twig', ignore_missing = true) }}
-
+    <script src="{{ asset('app.js', 'meemoo') }}"></script>
     {% block preload %}{% endblock %}
   </head>
   <body id="{{ templateId }}">

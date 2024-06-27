@@ -274,4 +274,23 @@ a.pure-menu-link:focus, .pure-menu-selected a.pure-menu-link:hover, .pure-menu-s
   background-color: #c9eae9;
 }
 
+.login-label {
+  width: 100% !important;
+}
 
+#eye-open {
+  float: right;
+  margin-top: 5px;
+  margin-right: 1px;
+  width: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+#eye-closed {
+  float: right;
+  margin-top: 5px;
+  width: 22px;
+  display: block;
+  cursor: pointer;
+}
