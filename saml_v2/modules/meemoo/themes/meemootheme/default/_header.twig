@@ -9,7 +9,13 @@
       <div class="v-center logo-header">
         <div id="logo">
         {% if header == 'SimpleSAMLphp' %}
-	  <img width="200px" src="{{ asset('logo-meemoo_nl.svg', 'meemoo') }}">
+
+          {% if currentLanguage == "nl" %}
+            <img width="200px" src="{{ asset('logo-meemoo_nl.svg', 'meemoo') }}">
+          {% else %}
+            <img width="200px" src="{{ asset('logo-meemoo_en.svg', 'meemoo') }}">
+          {% endif %}
+
         {% else %}
           {{ header }}
         {% endif %}
