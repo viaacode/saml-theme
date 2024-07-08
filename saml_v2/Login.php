@@ -299,7 +299,7 @@ class Login
         # use SSUM_ENV var
         $ssum_url = getenv('SSUM_URL');
         if ($ssum_url == false) {
-          $ssum_url = "https://account-qas.hetarchief.be";
+          $ssum_url = "https://ssum-tst-iam.private.cloud.meemoo.be";
         }
 
         # added for having a redirectTo on the password forget link
