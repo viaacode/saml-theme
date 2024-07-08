@@ -299,13 +299,13 @@ class Login
         # use SSUM_ENV var
         $ssum_url = getenv('SSUM_URL');
         if ($ssum_url == false) {
-          $ssum_url = "https://ssum-tst-iam.private.cloud.meemoo.be";
+            $ssum_url = "https://ssum-tst-iam.private.cloud.meemoo.be";
         }
 
         # added for having a redirectTo on the password forget link
         $t->data['ssumUrl'] = $ssum_url;
-        $t->data['redirectTo'] = $this->getReturnPath($request);
-
+        $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
+	
         return $t;
     }
 
