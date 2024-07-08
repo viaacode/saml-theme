@@ -304,7 +304,12 @@ class Login
 
         # added for having a redirectTo on the password forget link
         $t->data['ssumUrl'] = $ssum_url;
-        $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
+
+        if (isset($state['\\SimpleSAML\\Auth\\State.restartURL'])) {
+          $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
+        } else {
+          $t->data['redirectTo'] = '/';
+        }
 	
         return $t;
     }
