@@ -71,11 +71,13 @@ cp -r saml-theme/saml_v2/modules/meemoo /usr/local/idp-tst.hetarchief.be/simples
 cp -r saml-theme/saml_v2/locales/* /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/locales
 ```
 
-7. Copy the customized controller that adds returnTo variable and SSUM_URL env var for customization.
-   (we might refactor this later to use a module controller instead).
+7. Set ENV VAR FOR OUR CUSTOM MeemooController that adds returnTo variable and SSUM_URL env var for customization.
 
 ```
-cp saml-theme/saml_v2/Login.php  /usr/local/idp-tst.hetarchief.be/simplesamlphp-2.2.2/modules/core/src/Controller/
+Custom controller is located here:
+/usr/local/idp-tst.hetarchief.be/simplesamlphp/modules/meemoo/src/Controller/MeemooController.php
+
+(but is copied in previous steps already when we compied the meemoo module)
 ```
 
 Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
