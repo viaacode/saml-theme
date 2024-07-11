@@ -1,7 +1,8 @@
 <?php
 
-namespace SimpleSAML\Module\meemoo;
+namespace SimpleSAML\Module\meemoo\Controller;
 
+/* use SimpleSAML\{Configuration, Logger, Session}; */
 use Twig\Environment;
 use SimpleSAML\XHTML\TemplateControllerInterface;
 
@@ -39,9 +40,9 @@ class MeemooController implements TemplateControllerInterface
         $state = $data['app_state'];
 
         if (isset($state['\\SimpleSAML\\Auth\\State.restartURL'])) {
-          $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
+          $data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
         } else {
-          $t->data['redirectTo'] = '/';
+          $data['redirectTo'] = '/';
         }
 
         # TODO: inside our redirectTo we also have a &language now that we can use to set locale
