@@ -37,8 +37,7 @@ class MeemooController implements TemplateControllerInterface
         # added for having a redirectTo on the password forget link
         $data['ssumUrl'] = $ssum_url;
 
-
-	      # compute redirectTo and optionally set locale
+        # compute redirectTo and optionally set locale
         $form_parts = parse_url($data['formURL']);
         parse_str($form_parts['query'], $form_query);
         $auth_state = $form_query['AuthState'];
@@ -51,9 +50,19 @@ class MeemooController implements TemplateControllerInterface
           $redirect_url = "/";
         }
 
-	      $data['redirectTo'] = $redirect_url;
+        $data['redirectTo'] = $redirect_url;
 
-        # TODO: now get our language inside the redirect_url params and set it if its available.
+	# fetch platform language from relaystate
+	# TODO: better handle cases where redirect was / or just the language is missing
+        $redir_parts = parse_url($redirect_url);
+        parse_str($redir_parts['query'], $redir_query);
+        $relay_state = $redir_query['RelayState'];
+
+        $relay_data = json_decode($relay_state);
+        $platform_language = $relay_data->{'language'};
+
+	# TODO: right now we just set a twig param, however we want to switch global local to platform_language here.
+	$data['platform_language'] = $platform_language;
     }
 }
 
