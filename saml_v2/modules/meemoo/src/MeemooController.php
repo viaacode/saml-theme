@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleSAML\Module\mymodule;
+namespace SimpleSAML\Module\meemoo;
 
 use Twig\Environment;
 use SimpleSAML\XHTML\TemplateControllerInterface;
