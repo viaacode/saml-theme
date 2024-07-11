@@ -36,14 +36,16 @@ class MeemooController implements TemplateControllerInterface
         # added for having a redirectTo on the password forget link
         $data['ssumUrl'] = $ssum_url;
 
-        # TODO: we need to somehow get access to $state here
-        # if (isset($state['\\SimpleSAML\\Auth\\State.restartURL'])) {
-        #   $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
-        # } else {
-        #   $t->data['redirectTo'] = '/';
-        # }
+        $state = $data['app_state'];
 
-        $data['extra_info'] = 'Extra information to use in your template';
+        if (isset($state['\\SimpleSAML\\Auth\\State.restartURL'])) {
+          $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
+        } else {
+          $t->data['redirectTo'] = '/';
+        }
+
+        # TODO: inside our redirectTo we also have a &language now that we can use to set locale
+        # $data['extra_info'] = 'Extra information to use in your template';
     }
 }
 

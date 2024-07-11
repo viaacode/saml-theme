@@ -296,20 +296,8 @@ class Login
             $t->headers->setCookie($cookie);
         }
 
-        # use SSUM_ENV var
-        $ssum_url = getenv('SSUM_URL');
-        if ($ssum_url == false) {
-            $ssum_url = "https://ssum-tst-iam.private.cloud.meemoo.be";
-        }
-
-        # added for having a redirectTo on the password forget link
-        $t->data['ssumUrl'] = $ssum_url;
-
-        if (isset($state['\\SimpleSAML\\Auth\\State.restartURL'])) {
-          $t->data['redirectTo'] = urlencode($state['\\SimpleSAML\\Auth\\State.restartURL']);
-        } else {
-          $t->data['redirectTo'] = '/';
-        }
+        # state is needed in our custom meemoo controller to add links and handle locale
+        $t->data['app_state'] = $state;
 	
         return $t;
     }
