@@ -80,18 +80,15 @@ Custom controller is located here:
 (but is copied in previous steps already when we compied the meemoo module)
 ```
 
-8. Custom function to switch to correct platform language (also in config.php add this)
+8. Custom function to switch to correct platform language (also in config.php add this under language.cookie line)
 
 ```
-    # 'language.get_language_function' => array('\SimpleSAML\Module\meemoo\Controller\MeemooController', 'getCustomLanguage'),
-    'language.get_language_function' => array('\SimpleSAML\Locale\Language', 'customLanguage'),
-
+    'language.get_language_function' => array('\SimpleSAML\Module\meemoo\Controller\MeemooController', 'detectRelayLanguage'),
 ```
+So now we call a STATIC function inside the custom meemoo controller that is copied in step 5. This reads the
+RelayState parameter passed by the platform and switches the current locale to correct language to match it.
 
-TODO: we now have our code in a patched simplesamlphp/src/SimpleSAML/Locale/Language.php class (havent gotten it working in a seperate file yet)
-For now we included the patched file (will figure out tonight or tomorrow how to move it into seperate file)
-
-Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
+9. Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
 if this is not set the fallback is "https://account-qas.hetarchief.be". This will be used as the base url for the ssum server.
 
 This can be done in the docker environment or you can directly use an apache config directive:
