@@ -80,6 +80,17 @@ Custom controller is located here:
 (but is copied in previous steps already when we compied the meemoo module)
 ```
 
+8. Custom function to switch to correct platform language (also in config.php add this)
+
+```
+    # 'language.get_language_function' => array('\SimpleSAML\Module\meemoo\Controller\MeemooController', 'getCustomLanguage'),
+    'language.get_language_function' => array('\SimpleSAML\Locale\Language', 'customLanguage'),
+
+```
+
+TODO: we now have our code in a patched simplesamlphp/src/SimpleSAML/Locale/Language.php class (havent gotten it working in a seperate file yet)
+For now we included the patched file (will figure out tonight or tomorrow how to move it into seperate file)
+
 Set SSUM_URL environment variable to correct SSUM base url. This can be "https://account-qas.hetarchief.be" or "https://account.hetarchief.be"
 if this is not set the fallback is "https://account-qas.hetarchief.be". This will be used as the base url for the ssum server.
 
