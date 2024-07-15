@@ -2,7 +2,6 @@
 
 namespace SimpleSAML\Module\meemoo\Controller;
 
-/* use SimpleSAML\{Configuration, Logger, Session}; */
 use Twig\Environment;
 use SimpleSAML\XHTML\TemplateControllerInterface;
 
@@ -51,19 +50,7 @@ class MeemooController implements TemplateControllerInterface
         }
 
         $data['redirectTo'] = $redirect_url;
-
-        # fetch platform language from relaystate
-        # # TODO: better handle cases where redirect was / or just the language is missing
-        $redir_parts = parse_url($redirect_url);
-        parse_str($redir_parts['query'], $redir_query);
-        $relay_state = $redir_query['RelayState'];
-
-        $relay_data = json_decode($relay_state);
-        $platform_language = $relay_data->{'language'};
-
-        # TODO: right now we just set a twig param, however we want to switch global local to platform_language here.
-        $data['platform_language'] = $platform_language;
-
+        # fetching platform language from relaystate is now done in a custom language.get_language_function (see config.php)
     }
 }
 
