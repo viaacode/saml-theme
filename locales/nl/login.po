@@ -1,6 +1,5 @@
-msgid ""
-msgstr ""
-"X-Domain: messages\n"
+msgid "Username"
+msgstr "E-mailadres"
 
 msgid "A service has requested you to authenticate yourself. Please enter your username and password in the form below."
 msgstr "Voor deze dienst is authenticatie vereist. Geef je e-mailadres en wachtwoord in onderstaand formulier."
