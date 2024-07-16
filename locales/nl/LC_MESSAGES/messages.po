@@ -20,5 +20,11 @@ msgstr "E-mailadres of wachtwoord niet bekend."
 msgid "Forgot your password"
 msgstr "Wachtwoord vergeten"
 
+msgid "Remember my username"
+msgstr "Onthoud e-mailadres"
+
+msgid "Without your username and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!"
+msgstr "Zonder je e-mailadres en wachtwoord kun je je niet authenticeren en dus niet gebruikmaken van deze dienst."
+
 msgid "footer_text"
 msgstr "Met deze account kan je aanmelden bij de diensten van"
