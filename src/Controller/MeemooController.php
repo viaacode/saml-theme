@@ -23,6 +23,8 @@ class MeemooController implements TemplateControllerInterface
         // get language from relay state in our request_uri
         $request_uri = $_SERVER['REQUEST_URI'];
         $form_parts = parse_url($request_uri);
+
+        if (!array_key_exists('query', $form_parts)) return $lang; 
         parse_str($form_parts['query'], $form_query);
 
         // fetch AuthState which includes our RelayState in embedded param
@@ -76,20 +78,21 @@ class MeemooController implements TemplateControllerInterface
         // added for having a redirectTo on the password forget link
         $data['ssumUrl'] = $ssum_url;
 
-        // compute redirectTo and optionally set locale
+        // The redirectTo is used in core/loginuserpass.twig for the password forget link
+        $data['redirectTo'] = urlencode("/"); // set default in case no formUrl or AuthState is found
+
+        // compute redirectTo in case we have AuthState data in the url 
+        if (!array_key_exists('formURL', $data)) return;
+
         $form_parts = parse_url($data['formURL']);
         parse_str($form_parts['query'], $form_query);
+
+        if (!array_key_exists('AuthState', $form_query)) return;
+
         $auth_state = $form_query['AuthState'];
         $auth_parts = explode('https://', $auth_state);
-
         if (count($auth_parts) == 2 ) {
-          $redirect_url = "https://".$auth_parts[1];
+          $data['redirectTo'] = urlencode("https://".$auth_parts[1]);
         }
-        else {
-          $redirect_url = "/";
-        }
-
-        // The redirectTo is used in core/loginuserpass.twig for the password forget link
-        $data['redirectTo'] = urlencode($redirect_url);
     }
 }
