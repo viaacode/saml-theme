@@ -54,6 +54,7 @@ h1 {
 }
 
 #languageform {
+  display: none;  /* disable showing of language selector (locale switch) dropdown. Parent platform now dictates locale */
   position: absolute;
   top: 14rem;
   right: -6.7rem;
