@@ -7,36 +7,34 @@ use SimpleSAML\XHTML\TemplateControllerInterface;
 
 class MeemooController implements TemplateControllerInterface
 {
-
     /**
      * This is called seperately before this controller is instantiated (using a public static for this)
-     * Set following in the config/config.php so that this method is called.
-     *     'language.get_language_function' => array('\SimpleSAML\Module\meemoo\Controller\MeemooController', 'detectRelayLanguage'),
+     * Set following in the config/config.php so that this method is called:
+     * 'language.get_language_function' => array('\SimpleSAML\Module\meemoo\Controller\MeemooController', 'detectRelayLanguage'),
      *
      * @param 
      * @return locale as string or null for default (locale format is 'en', 'nl')
      */
     public static function detectRelayLanguage() 
     {
-        $lang = null; // using null takes system default locale determined by either cookie or set default (dutch)
+        // using null takes system default locale determined by either cookie or configured default
+        $lang = null; 
 	
         // get language from relay state in our request_uri
         $request_uri = $_SERVER['REQUEST_URI'];
         $form_parts = parse_url($request_uri);
         parse_str($form_parts['query'], $form_query);
 
-        // fetch authstate which includes our redirect_url
+        // fetch AuthState which includes our RelayState in embedded param
         if (!array_key_exists('AuthState', $form_query)) return $lang; 
         $auth_state = $form_query['AuthState'];
         $auth_parts = explode('https://', $auth_state);
-
         if (count($auth_parts) != 2) return $lang;
         
-        # fetch language from relaystate
+        # now fetch platform language from RelayState
         $redirect_url = "https://".$auth_parts[1];
         $redir_parts = parse_url($redirect_url);
         parse_str($redir_parts['query'], $redir_query);
-
         if (!array_key_exists('RelayState', $redir_query)) return $lang; 
 
         $relay_state = $redir_query['RelayState'];
@@ -48,7 +46,6 @@ class MeemooController implements TemplateControllerInterface
 
         return $lang;
     }
-
 
     /**
      * Modify the twig environment after its initialization (e.g. add filters or extensions).
@@ -92,8 +89,7 @@ class MeemooController implements TemplateControllerInterface
           $redirect_url = "/";
         }
 
-        // The redirectTo is used in our twig view to construct the password forget link to ssum
+        // The redirectTo is used in core/loginuserpass.twig for the password forget link
         $data['redirectTo'] = $redirect_url;
     }
 }
-

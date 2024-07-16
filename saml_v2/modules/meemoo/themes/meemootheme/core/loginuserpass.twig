@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-
     {%- if not isProduction %}
     <div class="message-box warning">
       {% trans %}You are now accessing a pre-production system. This authentication setup is for testing and pre-production verification only. If someone sent you a link that pointed you here, and you are not <i>a tester</i> you probably got the wrong link, and should <b>not be here</b>.{% endtrans %}
@@ -33,7 +32,6 @@
         </div>
     </div>
     {%- endif %}
-
 
     <div class="center-form login-form">
       <div class="login-form-start">
@@ -115,6 +113,7 @@
         </form>
       </div>
     </div>
+
     {% if loginpage_links is defined -%}
     <ul>
         {% for link in loginpage_links -%}
@@ -124,7 +123,6 @@
     {%- endif %}
 
     <br><br>
-    
     <div class="pure-form-message password-forget-wrap">
       <div class="password-forgot-link">
         <a href="{{ssumUrl}}/{{currentLanguage}}/users/password/new?redirect_to={{redirectTo}}">
