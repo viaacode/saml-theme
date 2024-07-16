@@ -90,6 +90,6 @@ class MeemooController implements TemplateControllerInterface
         }
 
         // The redirectTo is used in core/loginuserpass.twig for the password forget link
-        $data['redirectTo'] = $redirect_url;
+        $data['redirectTo'] = urlencode($redirect_url);
     }
 }
