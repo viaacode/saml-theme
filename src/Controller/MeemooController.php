@@ -33,7 +33,7 @@ class MeemooController implements TemplateControllerInterface
         $auth_parts = explode('https://', $auth_state);
         if (count($auth_parts) != 2) return $lang;
         
-        # now fetch platform language from RelayState
+        # now fetch platform language from RelayState if its supplied
         $redirect_url = "https://".$auth_parts[1];
         $redir_parts = parse_url($redirect_url);
         parse_str($redir_parts['query'], $redir_query);
@@ -43,8 +43,11 @@ class MeemooController implements TemplateControllerInterface
         $relay_data = json_decode($relay_state);
         if ($relay_data == null) return $lang;
 
-        $platform_language = $relay_data->{'language'};
-        if ($platform_language != null) $lang=$platform_language;
+        // check for language property in relay state
+        if (property_exists($relay_data, 'language')) {
+          $platform_language = $relay_data->{'language'};
+          if ($platform_language != null) $lang = $platform_language;
+        }
 
         return $lang;
     }
