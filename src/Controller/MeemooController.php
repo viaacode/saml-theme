@@ -15,11 +15,11 @@ class MeemooController implements TemplateControllerInterface
      * @param 
      * @return locale as string or null for default (locale format is 'en', 'nl')
      */
-    public static function detectRelayLanguage() 
+    public static function detectRelayLanguage($language_module) 
     {
-        // using null takes system default locale determined by either cookie or configured default
-        $lang = null; 
-	
+        // we use the getDefaultLanguage() which is the language.default specified in config.php as safe fallback
+        $lang = $language_module->getDefaultLanguage();
+
         // get language from relay state in our request_uri
         $request_uri = $_SERVER['REQUEST_URI'];
         $form_parts = parse_url($request_uri);
