@@ -5,13 +5,11 @@ msgstr ""
 msgid "A service has requested you to authenticate yourself. Please enter your username and password in the form below."
 msgstr "Voor deze dienst is authenticatie vereist. Geef je e-mailadres en wachtwoord in onderstaand formulier."
 
-#: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:260
 msgid "Either no user with the given username could be found, or the password you gave was wrong. Please check the username and try again."
 msgstr "Het opgegeven e-mailadres bestaat niet, of het wachtwoord is ongeldig. Verifieer het e-mailadres en probeer het nogmaals."
 
-#: /home/runner/work/simplesamlphp/simplesamlphp/src/SimpleSAML/Error/ErrorCodes.php:102
 msgid "Incorrect username or password"
-msgstr "Incorrecte e-mailadres of wachtwoord"
+msgstr "Incorrect e-mailadres of wachtwoord"
 
 msgid "Incorrect username or password."
 msgstr "E-mailadres of wachtwoord niet bekend."
@@ -27,6 +25,9 @@ msgstr "Inloggen"
 
 msgid "Username"
 msgstr "E-mailadres"
+
+msgid "Remember my username"
+msgstr "Onthoud e-mailadres"
 
 msgid "Without your username and password you cannot authenticate yourself for access to the service. There may be someone that can help you. Consult the help desk at your organization!"
 msgstr "Zonder je e-mailadres en wachtwoord kun je je niet authenticeren en dus niet gebruikmaken van deze dienst."
