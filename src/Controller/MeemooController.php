@@ -15,21 +15,9 @@ class MeemooController implements TemplateControllerInterface
      * @param 
      * @return locale as string or null for default (locale format is 'en', 'nl')
      */
-    public static function detectRelayLanguage($language_module) 
-    {
-        // we use the getDefaultLanguage() which is the language.default specified in config.php as safe fallback
-        $lang = $language_module->getDefaultLanguage();
 
-        // get language from relay state in our request_uri
-        $request_uri = $_SERVER['REQUEST_URI'];
-        $form_parts = parse_url($request_uri);
-
-        if (!array_key_exists('query', $form_parts)) return $lang; 
-        parse_str($form_parts['query'], $form_query);
-
-        // fetch AuthState which includes our RelayState in embedded param
-        if (!array_key_exists('AuthState', $form_query)) return $lang; 
-        $auth_state = $form_query['AuthState'];
+    public static function getRelayLanguage($lang, $state_key, $form_query) {
+        $auth_state = $form_query[$state_key];
         $auth_parts = explode('https://', $auth_state);
         if (count($auth_parts) != 2) return $lang;
         
@@ -48,6 +36,30 @@ class MeemooController implements TemplateControllerInterface
           $platform_language = $relay_data->{'language'};
           if ($platform_language != null) $lang = $platform_language;
         }
+
+        return $lang;
+    }
+
+    public static function detectRelayLanguage($language_module) 
+    {
+        // we use the getDefaultLanguage() which is the language.default specified in config.php as safe fallback
+        $lang = $language_module->getDefaultLanguage();
+
+        // get language from relay state in our request_uri
+        $request_uri = $_SERVER['REQUEST_URI'];
+        $form_parts = parse_url($request_uri);
+
+        if (!array_key_exists('query', $form_parts)) return $lang; 
+        parse_str($form_parts['query'], $form_query);
+
+
+        // fetch language from AuthState or StateId if available
+        if (array_key_exists('AuthState', $form_query)){
+          $lang = getRelayLanguage($lang, 'AuthState', $form_query);
+        } 
+        else if (array_key_exists('StateId', $form_query)){
+          $lang = getRelayLanguage($lang, 'StateId', $form_query);
+        } 
 
         return $lang;
     }
