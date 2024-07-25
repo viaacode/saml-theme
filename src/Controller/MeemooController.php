@@ -84,6 +84,16 @@ class MeemooController implements TemplateControllerInterface
         // The redirectTo is used in core/loginuserpass.twig for the password forget link
         $data['redirectTo'] = urlencode("/"); // set default in case no formUrl or AuthState is found
 
+        // compute a customLogoutUrl(needed for 403 pages). We need to parse Stateid param here.
+        // TODO: we need to compute ReturnTo using the page request url here 
+        //
+        // $request_uri = $_SERVER['REQUEST_URI'];
+        // echo "REQUEST=";
+        // echo $request_uri;
+        // For now test that this will actually work by manually setting correct return to ourselves:
+        $logoutReturnTo = 'https://hetarchief-tst.private.cloud.meemoo.be';
+        $data['customLogoutUrl'] = '/module.php/core/logout/viaa-ldap-people?ReturnTo='.$logoutReturnTo;
+
         // compute redirectTo in case we have AuthState data in the url 
         if (!array_key_exists('formURL', $data)) return;
 

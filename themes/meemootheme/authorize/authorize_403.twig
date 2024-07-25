@@ -20,8 +20,13 @@
   </p>
 {% endif %}
 
-<!-- TODO: fix LogoutURL, its defined somewhere but not pointing to right location -->
-{% if LogoutURL is defined %}
+{% if customLogoutUrl is defined %}
+  <p>
+    <a href="{{ customLogoutUrl }}">
+      <button class="pure-button pure-button-red">{% trans %}Logout{% endtrans %}</button>
+    </a>
+  </p>
+{% elseif LogoutURL is defined %}
   <p>
     <a href="{{ LogoutURL }}">
       <button class="pure-button pure-button-red">{% trans %}Logout{% endtrans %}</button>
