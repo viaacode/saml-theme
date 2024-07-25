@@ -62,6 +62,64 @@ class MeemooController implements TemplateControllerInterface
     {
     }
 
+    private function get_logout_link(): string {
+      $request_uri = $_SERVER['REQUEST_URI'];
+      $request_uri = "/module.php/authorize/error/forbidden?StateId=_c0f0f021be1d82554369d494eb6d0e573e6e23739f%3Ahttps%3A%2F%2Fidp-tst.hetarchief.be%2Fmodule.php%2Fsaml%2Fidp%2FsingleSignOnService%3Fspentityid%3Dhttp%253A%252F%252Fhetarchief-v3-tst%252Fsp%26RelayState%3D%257B%2522returnToUrl%2522%253A%2522https%253A%252F%252Fhetarchief-tst.private.cloud.meemoo.be%2522%252C%2522language%2522%253A%2522nl%2522%257D%26cookieTime%3D1721915992";
+
+      // custom logout fallback (logs out and returns to idp main page)
+      $customLogoutUrl = '/module.php/core/logout/viaa-ldap-people';
+
+      // check for returnToUrl so we can redirect back to platform after logging out
+      $logout_uri_parts = parse_url($request_uri);
+      if (!array_key_exists('query', $logout_uri_parts)) return $customLogoutUrl;
+      parse_str($logout_uri_parts['query'], $uri_query);
+     
+      if (!array_key_exists('StateId', $uri_query)) return $customLogoutUrl;
+      $logout_state = $uri_query['StateId'];
+     
+      $state_parts = explode('https://', $logout_state);
+      if (count($state_parts) != 2) return $customLogoutUrl;
+
+      $logout_redir = parse_url('https://'.$state_parts[1]);
+      parse_str($logout_redir['query'], $logout_params);
+      
+      if (!array_key_exists('RelayState', $logout_params)) return $customLogoutUrl;
+      $logout_relay = $logout_params['RelayState'];
+
+      $logout_data = json_decode($logout_relay);
+      if ($logout_data == null) return $customLogoutUrl;
+
+      if (property_exists($logout_data, 'returnToUrl')) {
+        $logoutReturnTo = $logout_data->{'returnToUrl'};
+        if ($logoutReturnTo != null) {
+          $customLogoutUrl = '/module.php/core/logout/viaa-ldap-people?ReturnTo='.$logoutReturnTo;
+        }
+      }
+
+      return $customLogoutUrl;
+    }
+
+    private function get_redirect_link(): string {
+      // default fallback redirectTo
+      $redirectTo = urlencode("/"); // set default in case no formUrl or AuthState is found
+
+      // compute redirectTo in case we have AuthState data in the url 
+      if (!array_key_exists('formURL', $data)) return $redirectTo;
+
+      $form_parts = parse_url($data['formURL']);
+      parse_str($form_parts['query'], $form_query);
+
+      if (!array_key_exists('AuthState', $form_query)) return $redirectTo;
+
+      $auth_state = $form_query['AuthState'];
+      $auth_parts = explode('https://', $auth_state);
+      if (count($auth_parts) == 2 ) {
+        $redirectTo = urlencode("https://".$auth_parts[1]);
+      }
+
+      return $redirectTo;
+    }
+
     /**
      * Add, delete or modify the data passed to the template.
      *
@@ -81,31 +139,10 @@ class MeemooController implements TemplateControllerInterface
         // added for having a redirectTo on the password forget link
         $data['ssumUrl'] = $ssum_url;
 
+        // customLogoutUrl is used in authorize/authorize_403.twig
+        $data['customLogoutUrl'] = get_logout_link();
+        
         // The redirectTo is used in core/loginuserpass.twig for the password forget link
-        $data['redirectTo'] = urlencode("/"); // set default in case no formUrl or AuthState is found
-
-        // compute a customLogoutUrl(needed for 403 pages). We need to parse Stateid param here.
-        // TODO: we need to compute ReturnTo using the page request url here 
-        //
-        // $request_uri = $_SERVER['REQUEST_URI'];
-        // echo "REQUEST=";
-        // echo $request_uri;
-        // For now test that this will actually work by manually setting correct return to ourselves:
-        $logoutReturnTo = 'https://hetarchief-tst.private.cloud.meemoo.be';
-        $data['customLogoutUrl'] = '/module.php/core/logout/viaa-ldap-people?ReturnTo='.$logoutReturnTo;
-
-        // compute redirectTo in case we have AuthState data in the url 
-        if (!array_key_exists('formURL', $data)) return;
-
-        $form_parts = parse_url($data['formURL']);
-        parse_str($form_parts['query'], $form_query);
-
-        if (!array_key_exists('AuthState', $form_query)) return;
-
-        $auth_state = $form_query['AuthState'];
-        $auth_parts = explode('https://', $auth_state);
-        if (count($auth_parts) == 2 ) {
-          $data['redirectTo'] = urlencode("https://".$auth_parts[1]);
-        }
+        $data['redirectTo'] = get_redirect_link();
     }
 }
