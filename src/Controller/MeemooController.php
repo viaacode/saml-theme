@@ -8,7 +8,7 @@ use SimpleSAML\XHTML\TemplateControllerInterface;
 class MeemooController implements TemplateControllerInterface
 {
     /**
-     * This is called seperately before this controller is instantiated (using a public static for this)
+     * These language detections are called seperately before this controller is instantiated (using a public static for this)
      * Set following in the config/config.php so that this method is called:
      * 'language.get_language_function' => array('\SimpleSAML\Module\meemoo\Controller\MeemooController', 'detectRelayLanguage'),
      *
@@ -55,10 +55,10 @@ class MeemooController implements TemplateControllerInterface
 
         // fetch language from AuthState or StateId if available
         if (array_key_exists('AuthState', $form_query)){
-          $lang = getRelayLanguage($lang, 'AuthState', $form_query);
+          $lang = MeemooController::getRelayLanguage($lang, 'AuthState', $form_query);
         } 
         else if (array_key_exists('StateId', $form_query)){
-          $lang = getRelayLanguage($lang, 'StateId', $form_query);
+          $lang = MeemooController::getRelayLanguage($lang, 'StateId', $form_query);
         } 
 
         return $lang;
