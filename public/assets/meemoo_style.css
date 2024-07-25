@@ -62,12 +62,10 @@ h1 {
 
 .logospace {
   float: left;
-  /* margin-left: -6.5rem; */
 }
 
 .archief-logo {
   position: absolute;
-  /*right: -6.5rem;*/
   right: 0px;
   top: 22px;
 }
@@ -98,12 +96,10 @@ h1 {
 
 @media (max-width: 640px) {
   .archief-logo {
-    /*right: -2rem;*/
     right: 10px;
     top: 5px;
   }
   .logospace {
-    /*margin-left: -2rem;*/
     margin-left: 10px;
     margin-top: -2.2rem;
   }
@@ -181,35 +177,10 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
 }
 
 .login-form {
-   /*
-   margin-left: -7rem;
-   margin-right: -7rem;
-   */
    display: inline-block;
    width: 100%;
 }
 
-@media (max-width: 640px) {
-  .login-form {
-    margin-left: 10px;
-    margin-right: 10px;
-  }  
-}
-
-@media (min-width: 640px) {
-  .message-box {
-    /*margin-left: -7rem;
-    margin-right: 9rem;*/
-    margin-left: 10px;
-    margin-right: -20px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .message-box {
-    margin-top: 4rem;
-  }
-}
 
 .login-input {
   width: 100%;
@@ -244,10 +215,6 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
 }
 
 .password-forget-wrap {
-  /*
-  margin-left: -7rem;
-  margin-right: 7rem;
-  */
   text-align: right;
   margin-top: -9.1rem;
 }
@@ -263,8 +230,9 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
 
 
 @media (max-width: 640px) {
-  .password-forget-wrap {
-    margin-right: 10px;
+  #portalcontent {
+    margin-left: 10px;
+    margin-right: 10px;  
   }
 }
 
