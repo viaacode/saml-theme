@@ -64,7 +64,6 @@ class MeemooController implements TemplateControllerInterface
 
     private function get_logout_link(): string {
       $request_uri = $_SERVER['REQUEST_URI'];
-      $request_uri = "/module.php/authorize/error/forbidden?StateId=_c0f0f021be1d82554369d494eb6d0e573e6e23739f%3Ahttps%3A%2F%2Fidp-tst.hetarchief.be%2Fmodule.php%2Fsaml%2Fidp%2FsingleSignOnService%3Fspentityid%3Dhttp%253A%252F%252Fhetarchief-v3-tst%252Fsp%26RelayState%3D%257B%2522returnToUrl%2522%253A%2522https%253A%252F%252Fhetarchief-tst.private.cloud.meemoo.be%2522%252C%2522language%2522%253A%2522nl%2522%257D%26cookieTime%3D1721915992";
 
       // custom logout fallback (logs out and returns to idp main page)
       $customLogoutUrl = '/module.php/core/logout/viaa-ldap-people';
@@ -99,7 +98,7 @@ class MeemooController implements TemplateControllerInterface
       return $customLogoutUrl;
     }
 
-    private function get_redirect_link(): string {
+    private function get_redirect_link(array &$data) {
       // default fallback redirectTo
       $redirectTo = urlencode("/"); // set default in case no formUrl or AuthState is found
 
@@ -140,9 +139,9 @@ class MeemooController implements TemplateControllerInterface
         $data['ssumUrl'] = $ssum_url;
 
         // customLogoutUrl is used in authorize/authorize_403.twig
-        $data['customLogoutUrl'] = get_logout_link();
+        $data['customLogoutUrl'] = $this->get_logout_link();
         
         // The redirectTo is used in core/loginuserpass.twig for the password forget link
-        $data['redirectTo'] = get_redirect_link();
+        $data['redirectTo'] = $this->get_redirect_link($data);
     }
 }
