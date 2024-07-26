@@ -78,7 +78,8 @@ class MeemooController implements TemplateControllerInterface
       $request_uri = $_SERVER['REQUEST_URI'];
 
       // custom logout fallback (logs out and returns to idp main page)
-      $customLogoutUrl = '/module.php/core/logout/viaa-ldap-people';
+      $defaultLogoutPage = "/module.php/meemoo/assets/logout_nl.html";
+      $customLogoutUrl = '/module.php/core/logout/viaa-ldap-people?ReturnTo='.$defaultLogoutPage;
 
       // check for returnToUrl so we can redirect back to platform after logging out
       $logout_uri_parts = parse_url($request_uri);
