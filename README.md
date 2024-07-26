@@ -102,8 +102,8 @@ SetEnv SSUM_URL "https://account.hetarchief.be"
     The target platforms need to be put in the config/config.php and you can use regex for this like so:
 
 ```
-    'trusted.url.domains' => ['.*\.meemoo\.be'],
-    'trusted.url.regex' => true,
+  'trusted.url.domains' => ['.*\.meemoo\.be', '.*\.hetarchief\.be'],
+  'trusted.url.regex' => true,
 ```
 
 This allows a custom logout url that works when a login error happened (it allows you to go back to parent platform and try different login method)
