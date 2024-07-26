@@ -22,13 +22,13 @@
 
 {% if customLogoutUrl is defined %}
   <p>
-    <a href="{{ customLogoutUrl }}">
+    <a class="pull-right" href="{{ customLogoutUrl }}">
       <button class="pure-button pure-button-red">{% trans %}Logout{% endtrans %}</button>
     </a>
   </p>
 {% elseif LogoutURL is defined %}
   <p>
-    <a href="{{ LogoutURL }}">
+    <a class="pull-right" href="{{ LogoutURL }}">
       <button class="pure-button pure-button-red">{% trans %}Logout{% endtrans %}</button>
     </a>
   </p>

@@ -4,7 +4,7 @@ html {
 
 @media (min-width: 900px) {
   html {
-    font-size: 58.33%; 
+    font-size: 58.33%;
   }
 }
 
@@ -15,11 +15,19 @@ html {
 }
 
 body {
-  font-family: "SofiaPro-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    "SofiaPro-Regular",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #2B414F;
-  background: #FFF;
+  color: #2b414f;
+  background: #ffffff;
 }
 
 h1 {
@@ -54,7 +62,7 @@ h1 {
 }
 
 #languageform {
-  display: none;  /* disable showing of language selector (locale switch) dropdown. Parent platform now dictates locale */
+  display: none; /* disable showing of language selector (locale switch) dropdown. Parent platform now dictates locale */
   position: absolute;
   top: 14rem;
   right: -6.7rem;
@@ -71,14 +79,12 @@ h1 {
 }
 
 .language-menu {
-  width: 140px !important; 
+  width: 140px !important;
 }
-
 
 .archief-logo img {
   width: 140px;
 }
-
 
 .copyrights {
   font-size: 1.4rem;
@@ -113,17 +119,19 @@ h1 {
   display: block !important;
 }
 
-#footer a, #footer a:visited {
-  color: #25A4CF;
+#footer a,
+#footer a:visited {
+  color: #25a4cf;
 }
 
-a, a:visited {
-  color: #25A4CF;
+a,
+a:visited {
+  color: #25a4cf;
   font-size: 15px;
 }
 
-
-#footer a:hover, #footer a:visited:hover {
+#footer a:hover,
+#footer a:visited:hover {
   color: #19718e;
   background-color: transparent;
   text-decoration: underline;
@@ -133,14 +141,15 @@ a, a:visited {
 
 /* override default red buttons and other basic elements to match wanted styling */
 .pure-button-red {
-  border: 1px solid #25A4CF;
-  background: #25A4CF;
-  color: #FFF !important;
+  border: 1px solid #25a4cf;
+  background: #25a4cf;
+  color: #fff !important;
 }
 
-.pure-button-red:hover, .pure-button-red:focus {
-  background: #19718E !important;
-  border-color: #19718E !important;
+.pure-button-red:hover,
+.pure-button-red:focus {
+  background: #19718e !important;
+  border-color: #19718e !important;
 }
 
 .pure-button {
@@ -162,14 +171,17 @@ a, a:visited {
   border-radius: 0.3rem;
 }
 
-a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
-.pure-menu-selected a.pure-menu-link:hover, .pure-menu-selected a.pure-menu-link:focus {
+a:hover,
+a:focus,
+a.pure-menu-link:hover,
+a.pure-menu-link:focus,
+.pure-menu-selected a.pure-menu-link:hover,
+.pure-menu-selected a.pure-menu-link:focus {
   background-color: transparent;
   color: #19718e;
   padding-left: 0px;
   padding-right: 2px;
 }
-
 
 /* =====  core/loginuserpass.twig ==== */
 .pure-form-aligned .pure-control-group label {
@@ -177,17 +189,16 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
 }
 
 .login-form {
-   display: inline-block;
-   width: 100%;
+  display: inline-block;
+  width: 100%;
 }
-
 
 .login-input {
   width: 100%;
   margin-top: 8px;
   border-radius: 0.3rem;
   background: #fff;
-  border: 1px solid #BAC7D1 !important;
+  border: 1px solid #bac7d1 !important;
   font-size: inherit;
   height: 3.6rem;
   padding: 0.8rem;
@@ -201,8 +212,8 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
 
 .login-input:focus {
   outline: 0;
-  border-color: #25A4CF !important;
-  box-shadow: inset 0 0 0 0.1rem #25A4CF !important;
+  border-color: #25a4cf !important;
+  box-shadow: inset 0 0 0 0.1rem #25a4cf !important;
 }
 
 .login-button {
@@ -228,24 +239,34 @@ a:hover, a:focus, a.pure-menu-link:hover, a.pure-menu-link:focus,
   transition: 0.18s background ease-in;
 }
 
-
 @media (max-width: 640px) {
   #portalcontent {
     margin-left: 10px;
-    margin-right: 10px;  
+    margin-right: 10px;
+  }
+
+  .password-forget-wrap {
+    margin-top: -8.4rem;
+  }
+
+  #content {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 .password-forgot-link a:hover {
   background: #ededed;
-} 
+}
 /* admin pages */
 .pure-menu-item a:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-a.pure-menu-link:focus, .pure-menu-selected a.pure-menu-link:hover, .pure-menu-selected a.pure-menu-link:focus {
+a.pure-menu-link:focus,
+.pure-menu-selected a.pure-menu-link:hover,
+.pure-menu-selected a.pure-menu-link:focus {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -276,5 +297,9 @@ a.pure-menu-link:focus, .pure-menu-selected a.pure-menu-link:hover, .pure-menu-s
 }
 
 .wrap {
-  width: 100%;	
+  width: 100%;
+}
+
+.pull-right {
+  float: right;
 }
