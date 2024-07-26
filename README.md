@@ -99,7 +99,11 @@ SetEnv SSUM_URL "https://account.hetarchief.be"
 ```
 
 10. Custom logout button in case 403 errors happen.
-    The target platforms need to be put in the config/config.php also like so:
-    'trusted.url.domains' => ['hetarchief-tst.private.cloud.meemoo.be'],
+    The target platforms need to be put in the config/config.php and you can use regex for this like so:
+
+```
+    'trusted.url.domains' => ['.*\.meemoo\.be'],
+    'trusted.url.regex' => true,
+```
 
 This allows a custom logout url that works when a login error happened (it allows you to go back to parent platform and try different login method)
