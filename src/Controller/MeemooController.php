@@ -74,12 +74,13 @@ class MeemooController implements TemplateControllerInterface
     {
     }
 
-    private function get_logout_link(): string {
+    private function get_logout_link($lang): string {
       $request_uri = $_SERVER['REQUEST_URI'];
 
-      // custom logout fallback (logs out and returns to idp main page)
-      $defaultLogoutPage = "/module.php/meemoo/assets/logout_nl.html";
+      // custom logout fallback shows a static logout page in correct language
+      $defaultLogoutPage = "/module.php/meemoo/assets/logout_".$lang.".html";
       $customLogoutUrl = '/module.php/core/logout/viaa-ldap-people?ReturnTo='.$defaultLogoutPage;
+
 
       // check for returnToUrl so we can redirect back to platform after logging out
       $logout_uri_parts = parse_url($request_uri);
@@ -152,7 +153,7 @@ class MeemooController implements TemplateControllerInterface
         $data['ssumUrl'] = $ssum_url;
 
         // customLogoutUrl is used in authorize/authorize_403.twig
-        $data['customLogoutUrl'] = $this->get_logout_link();
+        $data['customLogoutUrl'] = $this->get_logout_link($data['currentLanguage']);
         
         // The redirectTo is used in core/loginuserpass.twig for the password forget link
         $data['redirectTo'] = $this->get_redirect_link($data);
