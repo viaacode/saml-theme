@@ -7,7 +7,7 @@
     <title>Meemoo: {{ pagetitle }}</title>
     <link rel="preload" href="{{ asset('fonts/fa-solid-900.woff2') }}" as="font" crossorigin>
     <link rel="stylesheet" href="{{ asset("css/stylesheet.css") }}">
-    <link rel="icon" href="{{ asset("favicon.ico") }}">
+    <link rel="icon" href="{{ asset("favicon.ico", 'meemoo') }}">
     <meta name="robots" content="noindex, nofollow">
     {{ include('_head.twig', ignore_missing = true) }}
     {{ include('google_tags_head.twig', ignore_missing = true) }}
